@@ -1,0 +1,21 @@
+#header {
+	font-family: 'Avenir Next W01', sans-serif;
+	font-weight: 800;
+	width: 100%;
+}
+
+#header ul {
+	display: flex;
+	list-style: none;
+}
+
+#header li {
+	padding: 0 1em;
+}
+
+#header a {
+	color: #3D404D;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
