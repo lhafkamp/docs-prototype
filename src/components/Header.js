@@ -7,7 +7,7 @@ class Header extends Component {
 		return (
 			<div id="header">
 				<ul>
-					<li><Link to='/'>Home</Link></li>
+					<a href="http://phusionpassenger.com/"><img src="/img/passenger_logo.svg" alt="home" /></a>
 					<li><Link to='/Tutorials'>Tutorials</Link></li>
 					<li><Link to='/Advanced'>Advanced guides</Link></li>
 					<li><Link to='/References'>References</Link></li>

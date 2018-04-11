@@ -1,21 +1,40 @@
 #header {
-	font-family: 'Avenir Next W01', sans-serif;
-	font-weight: 800;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Avenir Next W01', sans-serif;
+  font-weight: 800;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid #DDE3EC;
 }
 
 #header ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  align-items: center;
+  max-width: 1220px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #header li {
-	padding: 0 1em;
+  padding: 0 20px;
 }
 
 #header a {
-	color: #3D404D;
-	font-size: 12px;
-	text-transform: uppercase;
-	text-decoration: none;
+  color: #3D404D;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#header a:hover,
+#header a:focus {
+  opacity: .8;
+}
+
+#header img {
+  max-height: 38px;
+  margin-right: 20px;
 }
