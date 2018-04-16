@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Dropdown from './Dropdown';
 import '../css/components/tutorial-nav.css';
@@ -15,14 +16,14 @@ class TutorialNav extends Component {
 	render() {
 		return (
 			<div id="tutorial-nav">
-				<img class="version" src="/img/version.png" alt="gem version"/>
+				<img className="version" src="/img/version.png" alt="gem version"/>
 				<Dropdown name="language" default='Ruby' items={this.state.languages} />
 				<Dropdown name="integration" default='Nginx' items={this.state.integrations} />
 
 				<ul>
 					<span>About Passenger</span>
-					<li>What is Passenger?</li>
-					<li>Fundamental concepts</li>
+					<li><NavLink exact to={'/tutorials/'} activeClassName="selected">What is Passenger?</NavLink></li>
+					<li><NavLink to={'/tutorials/fundamental_concepts/'} activeClassName="selected">Fundamental concepts</NavLink></li>
 				</ul>
 
 				<ul>

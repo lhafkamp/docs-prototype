@@ -70,7 +70,7 @@ class Dropdown extends Component {
 				<select name={this.props.name} style={style} onChange={this.handleChange}>
 					{this.props.items.map(item => <option value={item} key={item}>{item}</option>)}
 				</select>
-				<span class="arrow-down"></span>
+				<span className="arrow-down"></span>
 			</div>
 		);
 	}

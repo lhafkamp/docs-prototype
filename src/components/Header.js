@@ -8,9 +8,9 @@ class Header extends Component {
 			<div id="header">
 				<ul>
 					<a href="http://phusionpassenger.com/"><img src="/img/passenger_logo.svg" alt="home" /></a>
-					<li><Link to='/tutorials'>Tutorials</Link></li>
-					<li><Link to='/advanced'>Advanced guides</Link></li>
-					<li><Link to='/references'>References</Link></li>
+					<li><Link to='/tutorials/'>Tutorials</Link></li>
+					<li><Link to='/advanced/'>Advanced guides</Link></li>
+					<li><Link to='/references/'>References</Link></li>
 				</ul>
 			</div>
 		);

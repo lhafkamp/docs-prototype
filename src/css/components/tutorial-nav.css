@@ -15,9 +15,19 @@
   line-height: 28px;
 }
 
+#tutorial-nav ul li a {
+  text-decoration: none;
+  color: #35373B;
+}
+
 #tutorial-nav .version {
   height: 17px;
   margin-bottom: 15px;
+}
+
+#tutorial-nav .selected {
+  font-weight: 500;
+  color: #4EA0FF;
 }
 
 #dropdown {
