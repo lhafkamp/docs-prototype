@@ -25,3 +25,23 @@ body {
   margin-top: 40px;
   display: flex;
 }
+
+.light-button {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #3D404D;
+  border: 1px solid #BABECD;
+  border-radius: 4px;
+  padding: 15px 20px;
+  transition: background .2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.light-button:hover,
+.light-button:focus {
+  border: 1px solid #3D404D;
+  color: #fff;
+  background: #3D404D;
+}

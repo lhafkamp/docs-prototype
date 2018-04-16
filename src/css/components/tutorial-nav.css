@@ -15,6 +15,11 @@
   line-height: 28px;
 }
 
+#tutorial-nav .version {
+  height: 17px;
+  margin-bottom: 15px;
+}
+
 #dropdown {
   display: flex;
   flex-direction: column;
@@ -29,8 +34,8 @@
   background-color: #E9E9E9;
   background-repeat: no-repeat;
   background-size: 20px auto;
-  background-position: 7px 50%;
-  text-indent: 25px;
+  background-position: 6px 50%;
+  text-indent: 22px;
   border: none;
   border-radius: 2px;
   font-size: 14px;

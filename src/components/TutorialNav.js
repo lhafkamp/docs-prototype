@@ -15,7 +15,7 @@ class TutorialNav extends Component {
 	render() {
 		return (
 			<div id="tutorial-nav">
-				<img src="" alt=""/>
+				<img class="version" src="/img/version.png" alt="gem version"/>
 				<Dropdown name="language" default='Ruby' items={this.state.languages} />
 				<Dropdown name="integration" default='Nginx' items={this.state.integrations} />
 
