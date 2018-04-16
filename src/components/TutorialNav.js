@@ -14,10 +14,10 @@ class TutorialNav extends Component {
 
 	render() {
 		return (
-			<div>
+			<div id="tutorial-nav">
 				<img src="" alt=""/>
-				<Dropdown name="language" items={this.state.languages} />
-				<Dropdown name="integration" items={this.state.integrations} />
+				<Dropdown name="language" default='Ruby' items={this.state.languages} />
+				<Dropdown name="integration" default='Nginx' items={this.state.integrations} />
 
 				<ul>
 					<span>About Passenger</span>

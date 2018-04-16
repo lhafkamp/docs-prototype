@@ -1,4 +1,58 @@
+#tutorial-nav span {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #818181;
+}
+
+#tutorial-nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+#tutorial-nav ul li {
+  font-size: 14px;
+  color: #35373B;
+  line-height: 28px;
+}
+
 #dropdown {
   display: flex;
   flex-direction: column;
+  margin-bottom: 25px;
+}
+
+#dropdown span {
+  margin-bottom: 10px;
+}
+
+#dropdown select {
+  background-color: #E9E9E9;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 7px 50%;
+  text-indent: 25px;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  height: 36px;
+  width: 138px;
+  padding-left: 10px;
+  appearance: none;
+}
+
+@-moz-document url-prefix() {
+    #dropdown select {
+       text-indent: 10px;
+    }
+}
+
+#dropdown .arrow-down {
+  position: absolute;
+  margin-top: 38px;
+  margin-left: 120px;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
 }
