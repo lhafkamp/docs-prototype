@@ -1,12 +1,19 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from './actions/actionCreators';
 import Main from './components/Main';
 
-const App = () => (
-	<Switch>
-		<Route exact path='*' component={Main} />
-	</Switch>
-)
+function mapStateToProps(state) {
+  return {
+    currentLanguage: state.currentLanguage,
+    currentIntegration: state.currentIntegration
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 export default App;

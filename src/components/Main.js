@@ -11,7 +11,7 @@ class Main extends Component {
 			<div>
 				<Header />
 				<div id="content">
-					<LeftNav />
+					<LeftNav choices={this.props} />
 					<MainContent />
 					<RightContent />
 				</div>

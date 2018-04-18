@@ -7,7 +7,7 @@ class LeftNav extends Component {
 	render() {
 		return (
 			<div id="left-nav">
-				<TutorialNav />
+				<TutorialNav choices={this.props.choices} />
 			</div>
 		);
 	}

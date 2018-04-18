@@ -17,8 +17,8 @@ class TutorialNav extends Component {
 		return (
 			<div id="tutorial-nav">
 				<img className="version" src="/img/version.png" alt="gem version"/>
-				<Dropdown name="language" default='Ruby' items={this.state.languages} />
-				<Dropdown name="integration" default='Nginx' items={this.state.integrations} />
+				<Dropdown choices={this.props.choices} name="language" default='Ruby' items={this.state.languages} />
+				<Dropdown choices={this.props.choices} name="integration" default='Nginx' items={this.state.integrations} />
 
 				<ul>
 					<span>About Passenger</span>
