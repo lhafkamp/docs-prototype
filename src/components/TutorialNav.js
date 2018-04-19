@@ -22,7 +22,7 @@ class TutorialNav extends Component {
 
 				<ul>
 					<span>About Passenger</span>
-					<li><NavLink exact to={'/tutorials/'} activeClassName="selected">What is Passenger?</NavLink></li>
+					<li><NavLink exact to={'/tutorials/what_is_passenger/'} activeClassName="selected">What is Passenger?</NavLink></li>
 					<li><NavLink to={'/tutorials/fundamental_concepts/'} activeClassName="selected">Fundamental concepts</NavLink></li>
 				</ul>
 

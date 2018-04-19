@@ -16,19 +16,19 @@ class Dropdown extends Component {
 		});
 
 		switch (e.target.value) {
-			default:
-			case 'Ruby':
-			case 'Python':
-			case 'Node':
-			case 'Meteor':
-				this.props.choices.changeLanguage(e.target.value);
-				break;
-			case 'Nginx':
-			case 'Apache':
-			case 'Standalone':
-				this.props.choices.changeIntegration(e.target.value)
-				break;
-			}
+		default:
+		case 'Ruby':
+		case 'Python':
+		case 'Node':
+		case 'Meteor':
+			this.props.choices.changeLanguage(e.target.value);
+			break;
+		case 'Nginx':
+		case 'Apache':
+		case 'Standalone':
+			this.props.choices.changeIntegration(e.target.value)
+			break;
+		}
 	}
 
 	componentDidUpdate(prevProps, prevState) {
