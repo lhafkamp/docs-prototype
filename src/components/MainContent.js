@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import WhatIsPassenger from './tutorials/WhatIsPassenger';
 import FundamentalConcepts from './tutorials/FundamentalConcepts';
+import GettingStarted from './tutorials/GettingStarted';
 import '../css/components/main-content.css';
 
 const TutorialRoutes = () => (
@@ -10,6 +11,7 @@ const TutorialRoutes = () => (
 		<Route exact path='/tutorials/' component={WhatIsPassenger} />
 		<Route path='/tutorials/what_is_passenger/' component={WhatIsPassenger} />
 		<Route path='/tutorials/fundamental_concepts/' component={FundamentalConcepts} />
+		<Route path='/tutorials/getting_started/' component={GettingStarted} />
 	</Switch>
 );
 

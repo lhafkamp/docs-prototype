@@ -54,3 +54,49 @@
   margin-top: 20px;
   margin-bottom: 80px;
 }
+
+#main-content pre {
+  display: block;
+  padding: 9.5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#main-content pre code {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#main-content .prompt {
+  color: #00aeff;
+  user-select: none;
+}
+
+#main-content .output {
+  color: #00aeff;
+}
+
+#main-content .note {
+  background: #fffbdd;
+  padding: 20px 20px 0px;
+  border: 1px solid rgba(27,31,35,0.15);
+  border-radius: 3px;
+}
+
+#main-content .note h3 {
+  margin-top: 0;
+}
