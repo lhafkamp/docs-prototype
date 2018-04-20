@@ -6,6 +6,7 @@ import FundamentalConcepts from './tutorials/FundamentalConcepts';
 import GettingStarted from './tutorials/GettingStarted';
 import Installation from './tutorials/Installation';
 import ThePassengerCommand from './tutorials/ThePassengerCommand';
+import ProcessManagement from './tutorials/ProcessManagement';
 import '../css/components/main-content.css';
 
 const TutorialRoutes = () => (
@@ -16,6 +17,7 @@ const TutorialRoutes = () => (
 		<Route path='/tutorials/getting_started/' component={GettingStarted} />
 		<Route path='/tutorials/installation/' component={Installation} />
 		<Route path='/tutorials/the_passenger_command/' component={ThePassengerCommand} />
+		<Route path='/tutorials/process_management/' component={ProcessManagement} />
 	</Switch>
 );
 
