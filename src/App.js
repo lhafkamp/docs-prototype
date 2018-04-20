@@ -4,14 +4,14 @@ import * as actionCreators from './actions/actionCreators';
 import Main from './components/Main';
 
 function mapStateToProps(state) {
-  return {
-    currentLanguage: state.currentLanguage,
-    currentIntegration: state.currentIntegration
-  }
+	return {
+		currentLanguage: state.currentLanguage,
+		currentIntegration: state.currentIntegration
+	}
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(actionCreators, dispatch);
+	return bindActionCreators(actionCreators, dispatch);
 }
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);

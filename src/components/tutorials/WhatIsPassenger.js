@@ -6,8 +6,7 @@ class WhatIsPassenger extends Component {
 		const header = `
 # What is Passenger?`;
 		
-		const body = `
-Phusion Passenger is an open source **web application server**. 
+		const body = `Phusion Passenger is an open source **web application server**. 
 It handles HTTP requests, manages processes and resources, and enables administration, 
 monitoring and problem diagnosis.
 

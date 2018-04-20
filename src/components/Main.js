@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Router } from 'react-router-dom';
 
 import Header from './Header';
 import LeftNav from './LeftNav.js';
@@ -19,7 +18,7 @@ class Main extends Component {
 				<Header />
 				<div id="content">
 					<LeftNav choices={this.props} />
-					<MainContent />
+					<MainContent choices={this.props} />
 					<RightContent />
 				</div>
 			</div>

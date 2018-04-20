@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import WhatIsPassenger from './WhatIsPassenger';
-import FundamentalConcepts from './FundamentalConcepts';
+import WhatIsPassenger from './tutorials/WhatIsPassenger';
+import FundamentalConcepts from './tutorials/FundamentalConcepts';
 import '../css/components/main-content.css';
 
 const TutorialRoutes = () => (
@@ -17,7 +17,7 @@ class MainContent extends Component {
 	render() {
 		return (
 			<div id="main-content">
-				<TutorialRoutes />
+				<TutorialRoutes choices={this.props} />
 			</div>
 		);
 	}

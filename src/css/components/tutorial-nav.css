@@ -1,3 +1,7 @@
+#tutorial-nav {
+  position: fixed;
+}
+
 #tutorial-nav span {
   font-size: 12px;
   text-transform: uppercase;
