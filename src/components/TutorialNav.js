@@ -32,8 +32,8 @@ class TutorialNav extends Component {
 					<li><NavLink to={'/tutorials/installation/'} activeClassName="selected">Installation</NavLink></li>
 					<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘Passenger’ command</NavLink></li>
 					<li><NavLink to={'/tutorials/process_management/'} activeClassName="selected">Process management</NavLink></li>
-					<li>Reloading code</li>
-					<li>The ‘Help’ command</li>
+					<li><NavLink to={'/tutorials/reloading_code/'} activeClassName="selected">Reloading code</NavLink></li>
+					<li><NavLink to={'/tutorials/the_help_command/'} activeClassName="selected">The ‘Help‘ command</NavLink></li>
 				</ul>
 
 				<ul>
