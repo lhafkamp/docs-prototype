@@ -33,7 +33,7 @@
   color: #4EA0FF;
 }
 
-#main-content ul li {
+#main-content li {
   line-height: 24px;
 }
 
@@ -57,13 +57,13 @@
 
 #main-content pre {
   display: block;
-  padding: 9.5px;
+  padding: 10px 15px 10px;
   font-size: 14px;
   line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
-  color: #fff;
-  background-color: #000;
+  color: #faf6e4;
+  background-color: #122b3b;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 0;
@@ -82,12 +82,18 @@
 }
 
 #main-content .prompt {
-  color: #00aeff;
+  color: #aeaeae;
   user-select: none;
 }
 
 #main-content .output {
   color: #00aeff;
+  white-space: pre-wrap;
+}
+
+#main-content .c {
+  font-style: italic;
+  color: #8BA7BA;
 }
 
 #main-content .note {
@@ -99,4 +105,12 @@
 
 #main-content .note h3 {
   margin-top: 0;
+}
+
+#main-content .label-info {
+  background: #fffbdd;
+  color: #122b3b;
+  padding: 1px;
+  font-size: 13px;
+  border-radius: 2px;
 }
