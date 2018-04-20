@@ -29,6 +29,7 @@ class TutorialNav extends Component {
 				<ul>
 					<span>Quickstart</span>
 					<li><NavLink to={'/tutorials/getting_started/'} activeClassName="selected">Getting started</NavLink></li>
+					<li><NavLink to={'/tutorials/installation/'} activeClassName="selected">Installation</NavLink></li>
 					<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘Passenger’ command</NavLink></li>
 					<li>Process management</li>
 					<li>Reloading code</li>
