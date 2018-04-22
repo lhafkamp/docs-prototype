@@ -33,7 +33,7 @@ class TutorialNav extends Component {
 					<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘Passenger’ command</NavLink></li>
 					<li><NavLink to={'/tutorials/process_management/'} activeClassName="selected">Process management</NavLink></li>
 					<li><NavLink to={'/tutorials/reloading_code/'} activeClassName="selected">Reloading code</NavLink></li>
-					<li><NavLink to={'/tutorials/the_help_command/'} activeClassName="selected">The ‘Help‘ command</NavLink></li>
+					<li><NavLink to={'/tutorials/the_help_option/'} activeClassName="selected">The ‘Help‘ option</NavLink></li>
 				</ul>
 
 				<ul>

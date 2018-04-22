@@ -40,6 +40,12 @@
   margin-bottom: 25px;
 }
 
+/* TODO change focus style */
+#dropdown select:focus,
+#dropdown select:hover {
+  outline: 0;
+}
+
 #dropdown span {
   margin-bottom: 10px;
 }
