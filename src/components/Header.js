@@ -11,6 +11,7 @@ class Header extends Component {
 					<li><Link to='/tutorials/'>Tutorials</Link></li>
 					<li><Link to='/advanced/'>Advanced guides</Link></li>
 					<li><Link to='/references/'>References</Link></li>
+					<a href="" className="dark-button">Free Trial</a>
 				</ul>
 			</div>
 		);

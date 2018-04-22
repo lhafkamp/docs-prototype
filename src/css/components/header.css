@@ -38,3 +38,8 @@
   max-height: 38px;
   margin-right: 20px;
 }
+
+#header .dark-button {
+  color: #fff !important;
+  margin-left: 40px;
+}
