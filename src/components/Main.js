@@ -8,7 +8,8 @@ import RightContent from './RightContent';
 class Main extends Component {
 	componentDidUpdate(prevProps) {
 		if (prevProps.currentLanguage !== this.props.currentLanguage) {
-			// url change
+			// test
+			this.props.history.push('/tutorials/the_help_option/')
 		}
 	}
 

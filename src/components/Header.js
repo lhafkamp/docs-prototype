@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../css/components/header.css';
 
 class Header extends Component {
@@ -8,10 +8,9 @@ class Header extends Component {
 			<div id="header">
 				<ul>
 					<a href="http://phusionpassenger.com/"><img src="/img/passenger_logo.svg" alt="home" /></a>
-					<li><Link to='/tutorials/'>Tutorials</Link></li>
-					<li><Link to='/advanced/'>Advanced guides</Link></li>
-					<li><Link to='/references/'>References</Link></li>
-					<a href="" className="light-button">Free Trial</a>
+					<li><NavLink to='/tutorials/' activeClassName="selected">Tutorials</NavLink></li>
+					<li><NavLink to='/advanced/' activeClassName="selected">Advanced guides</NavLink></li>
+					<li><NavLink to='/references/' activeClassName="selected">References</NavLink></li>
 				</ul>
 			</div>
 		);
