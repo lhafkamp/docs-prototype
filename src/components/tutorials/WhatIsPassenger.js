@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import ReactPlayer from 'react-player';
+import { connect } from 'react-redux';
 
 import NextStep from '../NextStep';
 
@@ -22,7 +23,7 @@ monitoring and problem diagnosis.
 		const body = `Passenger is very easy to use, makes deploying in production much easier and is scalable. If 
 you aren't already familiar with the benefits, you can [learn more about them](https://www.phusionpassenger.com/advantages).
 
-Passenger supports multiple programming languages, of which Ruby is one. 
+Passenger supports multiple programming languages, of which ${this.props.currentLanguage} is one. 
 Passenger can also serve multiple applications at the same time (it is multitenant).`;
 
 		return (
@@ -77,4 +78,10 @@ Passenger can also serve multiple applications at the same time (it is multitena
 	}
 }
 
-export default WhatIsPassenger;
+function mapStateToProps(state) {
+	return {
+		currentLanguage: state.currentLanguage
+	}
+}
+
+export default connect(mapStateToProps)(WhatIsPassenger)

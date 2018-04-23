@@ -9,7 +9,7 @@ class Main extends Component {
 	componentDidUpdate(prevProps) {
 		if (prevProps.currentLanguage !== this.props.currentLanguage) {
 			// test
-			this.props.history.push('/tutorials/the_help_option/')
+			// this.props.history.push('/tutorials/the_help_option/')
 		}
 	}
 

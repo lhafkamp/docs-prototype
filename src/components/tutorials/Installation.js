@@ -5,20 +5,30 @@ import { connect } from 'react-redux';
 import NextStep from '../NextStep';
 
 class Installation extends Component {
+	constructor() {
+		super()
+		this.handleChange = this.handleChange.bind(this);
+	}
+
 	componentDidMount() {
 		window.scrollTo(0, 0);
 	}
+
+	handleChange() {
+		alert('hi');
+	}
 	
 	render() {
-		// markdown variables
+		// language/integration text based variables
+		let body = '';
 
+		// markdown variables
 		const header = `
 # Installation`
 
-		const subTitle = `
-Installing Passenger is easy. During development, you use Bundler to install Passenger.`
+		const rubyBody = `
+Installing Passenger is easy. During development, you use Bundler to install Passenger.
 
-		const body = `
 Open your application's Gemfile and add "passenger":
 
 ~~~ruby
@@ -43,11 +53,45 @@ You can verify that it works by querying Passenger's version number:
 
 <div class="note">Installation in production is different, but we'll cover that later in the <a href="../../deploy/ruby/">deployment tutorial</a>.</div>
 `
+
+		const otherBody = `
+Installing Passenger for development is easy. We provide OS-specific installation packages to make your life easy.
+
+<p><select id="os_install_select">
+  <option value="osx">macOS</option>
+</select></p>
+
+<div class="install_os install_os_osx">
+  <p>
+    You can install Passenger through <a href="http://brew.sh/">Homebrew</a>:
+  </p>
+  <pre class="highlight shell"><span class="prompt">$ </span>brew install passenger</pre>
+  <p>After installation, please validate the install by running <code>passenger-config validate-install</code>. For example:</p>
+  <pre class="highlight shell"><span class="prompt">$ </span>passenger-config validate-install
+  <span class="output">* Checking whether this Phusion Passenger install is in PATH... ✓
+  * Checking whether there are no other Phusion Passenger installations... ✓</span></pre>
+</div>
+
+## Installation in production
+
+Installation in production is a bit different. We will cover that later in the <a href="../../deploy/python/">deployment tutorial</a>.
+`
+
+		switch (this.props.currentLanguage) {
+		default:
+		case 'Ruby':
+			body = rubyBody;
+			break;
+		case 'Python':
+		case 'Node':
+		case 'Meteor':
+			body = otherBody;
+			break;
+		}
 		
 		return (
 			<div>
 				<Markdown source={header} />
-				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="The 'Passenger' command" path="/tutorials/the_passenger_command/" />
 			</div>
