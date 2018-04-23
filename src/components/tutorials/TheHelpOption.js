@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class TheHelpOption extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		// markdown variables
 
@@ -54,6 +60,7 @@ So if you want to know what a command does and whether its behavior can be modif
 				<Markdown source={header} />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
+				<NextStep name="Deploy to production" path="/tutorials/deploy_to_production/" />
 			</div>
 		)
 	}

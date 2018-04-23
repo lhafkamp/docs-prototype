@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class ThePassengerCommand extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		// markdown variables
 
@@ -150,6 +156,7 @@ All command line options have a configuration file equivalent. Just omit the ini
 				<Markdown source={header} />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
+				<NextStep name="Process management" path="/tutorials/process_management/" />
 			</div>
 		)
 	}

@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class FundamentalConcepts extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		// language/integration text based variables
 		let standaloneText = '';
@@ -163,6 +169,8 @@ Passenger does many things, but some things are currently out of scope.
 				</div>
 				<Markdown source={MultipleIntegrationModes_part_two} />
 				<Markdown source={WhatPassengerDoesntDo} />
+
+				<NextStep name="Getting started" path="/tutorials/getting_started" />
 			</div>
 		);
 	}

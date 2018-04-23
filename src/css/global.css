@@ -42,15 +42,18 @@ body {
 .light-button:hover,
 .light-button:focus {
   border: 1px solid #3D404D;
-  color: #fff;
+  /* override the usual <a> tag */
+  font-weight: 600 !important;
+  color: #fff !important;
   background: #3D404D;
 }
 
 .dark-button {
   font-size: 14px;
-  font-weight: 900;
   text-transform: uppercase;
-  color: #fff;
+  /* override the usual <a> tag */
+  font-weight: 600 !important;
+  color: #fff !important;
   background: #4EA0FF;
   border-radius: 4px;
   padding: 15px 20px;
@@ -62,5 +65,5 @@ body {
 .dark-button:hover,
 .dark-button:focus {
   color: #fff;
-  background: #3D404D;
+  background: #0076FF;
 }

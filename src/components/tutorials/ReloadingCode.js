@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class ReloadingCode extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		// markdown variables
 
@@ -105,6 +111,7 @@ Congratulations, you have almost reached the conclusion of this basics tutorial.
 				<Markdown source={header} />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
+				<NextStep name="The 'Help' option" path="/tutorials/the_help_option/" />
 			</div>
 		)
 	}

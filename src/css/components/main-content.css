@@ -172,18 +172,18 @@
 
 #main-content .logos {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #main-content .logos div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 #main-content .logos div span {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #main-content .logos img {
@@ -191,4 +191,13 @@
   height: 40px;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+#main-content #next-step {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+#main-content #next-step h2 {
+  margin-bottom: 35px;
 }

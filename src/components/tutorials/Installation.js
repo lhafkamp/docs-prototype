@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class Installation extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+	
 	render() {
 		// markdown variables
 
@@ -43,6 +49,7 @@ You can verify that it works by querying Passenger's version number:
 				<Markdown source={header} />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
+				<NextStep name="The 'Passenger' command" path="/tutorials/the_passenger_command/" />
 			</div>
 		)
 	}

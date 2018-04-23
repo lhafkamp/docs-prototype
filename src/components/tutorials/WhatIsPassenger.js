@@ -2,16 +2,24 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import ReactPlayer from 'react-player';
 
+import NextStep from '../NextStep';
+
 class WhatIsPassenger extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		const header = `
 # What is Passenger?`;
-		
-		const body = `Phusion Passenger is an open source **web application server**. 
+
+		const subTitle = `
+Phusion Passenger is an open source **web application server**. 
 It handles HTTP requests, manages processes and resources, and enables administration, 
 monitoring and problem diagnosis.
-
-Passenger is very easy to use, makes deploying in production much easier and is scalable. If 
+`
+		
+		const body = `Passenger is very easy to use, makes deploying in production much easier and is scalable. If 
 you aren't already familiar with the benefits, you can [learn more about them](https://www.phusionpassenger.com/advantages).
 
 Passenger supports multiple programming languages, of which Ruby is one. 
@@ -20,6 +28,7 @@ Passenger can also serve multiple applications at the same time (it is multitena
 		return (
 			<div>
 				<Markdown source={ header } />
+				<Markdown source={ subTitle } />
 				<ReactPlayer className="video-player" url='https://player.vimeo.com/external/224923750.hd.mp4?s=6931550c8a2bedabba0822a6ec7966c45ee1fbc4&profile_id=174" type="video/mp4' controls />
 				<p className="video-sub-text">Phusion Passenger - the smart app server</p>
 				<Markdown source={ body } />
@@ -60,6 +69,8 @@ Passenger can also serve multiple applications at the same time (it is multitena
 							<span>Standalone</span>
 						</div>
 					</div>
+
+					<NextStep name="Fundamental concepts" path="/tutorials/fundamental_concepts/" />
 				</div>
 			</div>
 		);

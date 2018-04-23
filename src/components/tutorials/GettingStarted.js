@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
+import NextStep from '../NextStep';
+
 class GettingStarted extends Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		// markdown variables
 
@@ -104,6 +110,7 @@ Congratulations! You've passed this tutorial and seen Passenger in action. You c
 				<Markdown source={header} />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
+				<NextStep name="Installation" path="/tutorials/installation/" />
 			</div>
 		)
 	}
