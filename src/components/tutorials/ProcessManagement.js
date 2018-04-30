@@ -236,13 +236,13 @@ Initially, Passenger only spawns one application process. But sometimes it may d
 
 When you start Passenger Standalone, it spawns one process. You can see this in action as follows. First, start Passenger Standalone:
 
-<pre class="highlight"><span class="prompt">$</span> bundle exec passenger start</pre>
+<pre class="highlight"><span class="prompt">$</span> passenger start</pre>
 
 Next, open a new terminal and run \`passenger-status\` to query the process management status of the Passenger instance:
 
 <pre class="highlight">
 <span><span class="prompt">$</span> cd /path-to-your-app</span>
-<span><span class="prompt">$</span> bundle exec passenger-status</span>
+<span><span class="prompt">$</span> passenger-status</span>
 <span class="output">Version : 5.0.6
 Date    : 2015-04-14 21:55:30 +0100
 Instance: 25002
@@ -276,20 +276,19 @@ The easiest way to see Passenger handling multiple processes is by passing \`--m
 
 Stop your previous Passenger instance. In the terminal where \`passenger start\` is running, press Ctrl-C:
 
-<pre class="highlight"><span class="prompt">$</span> bundle exec passenger start
+<pre class="highlight"><span class="prompt">$</span> passenger start
 <span class="output">...
 (press Ctrl-C here)
 Stopping web server... done!</span></pre>
 
 Then re-run Passenger with \`--min-instances 2\`:
 
-<pre class="highlight"><span class="prompt">$</span> bundle exec passenger start --min-instances 2</pre>
+<pre class="highlight"><span class="prompt">$</span> passenger start --min-instances 2</pre>
 
 Switch to the second terminal again and run \`passenger-status\` again:
 
 <pre class="highlight">
-<span><span class="prompt">$</span> cd /path-to-your-app</span>
-<span><span class="prompt">$</span> bundle exec passenger start</span>
+<span><span class="prompt">$</span> passenger start</span>
 <span class="output">Version : 5.0.6
 Date    : 2015-04-14 21:57:30 +0100
 Instance: 25002
@@ -321,7 +320,7 @@ In our example, the second process's PID is 25016. The PIDs will be different on
 
 Wait 5 seconds, then run \`passenger-status\`. Notice that process 25016 is gone and that it has been replaced by 25017!
 
-<pre class="highlight"><span class="prompt">$</span> bundle exec passenger-status
+<pre class="highlight"><span class="prompt">$</span> passenger-status
 <span class="output">Version : 5.0.6
 Date    : 2015-04-14 21:58:30 +0100
 Instance: 25002
@@ -359,7 +358,7 @@ You can see some of this in action by sending a large number of requests to Pass
 
 If you run \`passenger-status\` again, you should see many processes:
 
-<pre class="highlight"><span class="prompt">$</span> bundle exec passenger-status
+<pre class="highlight"><span class="prompt">$</span> passenger-status
 <span class="output">Version : 5.0.6
 Date    : 2015-04-14 22:05:30 +0100
 Instance: 25002
@@ -388,7 +387,7 @@ Requests in top-level queue : 0
 By default, Passenger shuts down processes that haven't handled traffic for 5 minutes (300 seconds). If you wait 5 minutes and run \`passenger-status\` again, you should see that only two processes are still alive:
 
 <pre class="highlight"><span class="prompt">$ </span>sleep 300
-<span class="prompt">$</span> bundle exec passenger-status
+<span class="prompt">$</span> passenger-status
 <span class="output">Version : 5.0.6
 Date    : 2015-04-14 22:05:30 +0100
 Instance: 25002

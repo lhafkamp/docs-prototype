@@ -124,7 +124,7 @@ You can use the \`passenger-config restart-app\` command to restart an applicati
 If you invoke \`passenger-config restart-app\` without arguments, it will ask you which application you want to restart. Here is an example:
 
 <pre class="highlight">
-<span><span class="prompt">$</span> bundle exec passenger-config restart-app</span>
+<span><span class="prompt">$</span> passenger-config restart-app</span>
 <span class="output">Please select the application to restart.
 Tip: re-run this command with --help to learn how to automate it.
 If the menu doesn't display correctly, press '!'
@@ -145,12 +145,12 @@ You can also tell \`passenger-config restart-app\` to restart a specific applica
 For example, suppose that your application is located in \`/Users/phusion/testapp\`. You have tell Passenger to restart the application like this:
 
 <pre class="highlight">
-<span><span class="prompt">$</span> bundle exec passenger-config restart-app /Users/phusion/testapp</span>
+<span><span class="prompt">$</span> passenger-config restart-app /Users/phusion/testapp</span>
 <span class="output">Restarting /Users/phusion/testapp/public (development)</span></pre>
 
 There is an even shorter way. You can tell Passenger to restart all apps that it is currently serving, by specifying \`/\` as the argument. This is because all applications' paths start with \`/\`.
 
-<span><span class="prompt">$</span> bundle exec passenger-config restart-app /Users/phusion/testapp</span>
+<span><span class="prompt">$</span> passenger-config restart-app /Users/phusion/testapp</span>
 <span class="output">Restarting /Users/phusion/testapp/public (development)</span></pre>
 
 ### Invoking the command quickly

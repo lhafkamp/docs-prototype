@@ -161,7 +161,7 @@ All command line options have a configuration file equivalent. Just omit the ini
 You begin using Passenger Standalone by starting a Passenger Standalone server. This can be done with the \`passenger start\` command.
 
 <pre class="highlight">
-<span class="prompt">$ </span>bundle exec passenger start
+<span class="prompt">$ </span>passenger start
 <span class="output">======= Phusion Passenger Standalone web server started =======
 PID file: /Users/phusion/myapp/tmp/pids/passenger.3000.pid.   <span class="label label-info">1</span>
 Log file: /Users/phusion/myapp/log/passenger.3000.log.        <span class="label label-info">2</span>
@@ -190,7 +190,9 @@ All of these parameters can be customized. We will talk about customization late
 
 Passenger itself logs things. The application itself may also log things. Here we will describe how logs are handled.
 
-You have learned that Passenger Standalone has a log file. Your application probably logs things to a log file. These are two distinct log files: the Passenger log file is not the application log file.
+You have learned that Passenger Standalone has a log file. Your application probably logs things to a log file.
+For example, Rails apps log to \`log/development.log\` when run in development mode.
+These are two distinct log files: the Passenger log file is not the application log file.
 
 Your application may also print to stdout or stderr. Passenger also considers these messages as logs.
 
@@ -201,7 +203,7 @@ Passenger handles all of these logs as follows:
  * Anything the application prints to stdout and stderr, are printed to the Passenger log file.
  * Passenger's own logs, the application log file, and anything the application prints to stdout and stderr, are printed to the terminal.
 
-There is just one caveat here. Passenger can only print the application log file to the terminal, if the log file is named \`log/<ENVIRONMENT NAME>.log\`.
+   There is just one caveat here. Passenger can only print the application log file to the terminal, if the log file is named \`log/<ENVIRONMENT NAME>.log\`. This is true for most Rails apps, at least.
 
 ## Stopping the server
 
@@ -221,6 +223,19 @@ $ bundle exec passenger start
 <span class="output">^C
 Stopping web server... done!</span></pre>
 
+### 'passenger stop'
+
+Let us also try out the \`passenger stop\` command. First, start Passenger up again:
+
+<pre class="highlight"><span class="prompt">$ </span>passenger start</pre>
+
+Open a seperate terminal, change the working directory to your application, and run \`passenger stop\`.
+
+<pre class="highlight"><span class="prompt">$ </span>cd /path-to-your-app
+<span class="prompt">$ </span>passenger stop</pre>
+
+When you switch back to the first terminal, you should see that Passenger has indeed stopped.
+
 ## Configuration
 
 ### Command line options
@@ -229,7 +244,7 @@ Most configuration is done by customizing the options passed to the \`passenger\
 
 Here is an example invocation:
 
-<pre class="highlight"><span class="prompt">$ </span>bundle exec passenger start --port 4000 --log-file awesome.log
+<pre class="highlight"><span class="prompt">$ </span>passenger start --port 4000 --log-file awesome.log
 <span class="output">======= Phusion Passenger Standalone web server started =======
 PID file: /PID file: /Users/phusion/myapp/tmp/pids/passenger.4000.pid
 Log file: /Log file: /Users/phusion/myapp/awesome.log
@@ -241,7 +256,7 @@ You can stop Phusion Passenger Standalone by pressing Ctrl-C.
 
 Many more configuration options are available. You can see all available options by passing \`--help\`:
 
-<pre class="highlight"><span class="prompt">$ </span>bundle exec passenger start --help
+<pre class="highlight"><span class="prompt">$ </span>passenger start --help
 <span class="output">Usage: passenger start [DIRECTORY] [OPTIONS]
 Starts Phusion Passenger Standalone and serve one or more web applications.
 
