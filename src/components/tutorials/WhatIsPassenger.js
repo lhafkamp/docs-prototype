@@ -15,7 +15,7 @@ class WhatIsPassenger extends Component {
 # What is Passenger?`;
 
 		const subTitle = `
-Phusion Passenger is an open source **web application server**. 
+Phusion Passenger is an <label>open source</label> **web application server**. 
 It handles HTTP requests, manages processes and resources, and enables administration, 
 monitoring and problem diagnosis.
 `
@@ -29,7 +29,7 @@ Passenger can also serve multiple applications at the same time (it is multitena
 		return (
 			<div>
 				<Markdown source={ header } />
-				<Markdown source={ subTitle } />
+				<Markdown escapeHtml={false} source={ subTitle } />
 				<ReactPlayer className="video-player" url='https://player.vimeo.com/external/224923750.hd.mp4?s=6931550c8a2bedabba0822a6ec7966c45ee1fbc4&profile_id=174" type="video/mp4' controls />
 				<p className="video-sub-text">Phusion Passenger - the smart app server</p>
 				<Markdown source={ body } />

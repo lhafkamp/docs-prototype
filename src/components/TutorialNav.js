@@ -27,18 +27,19 @@ class TutorialNav extends Component {
 				</ul>
 
 				<ul>
-					<span>Quickstart</span>
-					<li><NavLink to={'/tutorials/getting_started/'} activeClassName="selected">Getting started</NavLink></li>
+					<span>Getting started</span>
+					<li><NavLink to={'/tutorials/getting_started/'} activeClassName="selected">Quickstart</NavLink></li>
 					<li><NavLink to={'/tutorials/installation/'} activeClassName="selected">Installation</NavLink></li>
-					<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘Passenger’ command</NavLink></li>
+					<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘passenger’ command</NavLink></li>
 					<li><NavLink to={'/tutorials/process_management/'} activeClassName="selected">Process management</NavLink></li>
 					<li><NavLink to={'/tutorials/reloading_code/'} activeClassName="selected">Reloading code</NavLink></li>
-					<li><NavLink to={'/tutorials/the_help_option/'} activeClassName="selected">The ‘Help‘ option</NavLink></li>
+					<li><NavLink to={'/tutorials/the_help_option/'} activeClassName="selected">The --help option</NavLink></li>
 				</ul>
 
 				<ul>
 					<span>Deployment</span>
 					<li>Deploy to production</li>
+					<li>Deploying updates</li>
 				</ul>
 			</div>
 		);

@@ -15,7 +15,7 @@ class GettingStarted extends Component {
 
 		// markdown variables
 		const header = `
-# Getting started`
+# Quickstart`
 
 		const subTitle = `
 This 5 minute tutorial teaches you to start your application in a Phusion 

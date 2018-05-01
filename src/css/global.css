@@ -34,7 +34,7 @@ body {
   border: 1px solid #BABECD;
   border-radius: 4px;
   padding: 15px 20px;
-  transition: background .2s;
+  transition: background .2s ease-in;
   text-decoration: none;
   text-align: center;
 }
@@ -57,7 +57,7 @@ body {
   background: #4EA0FF;
   border-radius: 4px;
   padding: 15px 20px;
-  transition: background .2s;
+  transition: background .2s ease-in;
   text-decoration: none;
   text-align: center;
 }
