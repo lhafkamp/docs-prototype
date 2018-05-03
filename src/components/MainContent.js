@@ -9,6 +9,7 @@ import ThePassengerCommand from './tutorials/ThePassengerCommand';
 import ProcessManagement from './tutorials/ProcessManagement';
 import ReloadingCode from './tutorials/ReloadingCode';
 import TheHelpOption from './tutorials/TheHelpOption';
+import DeployToProduction from './tutorials/DeployToProduction';
 import PageNotFound from './PageNotFound';
 import '../css/components/main-content.css';
 
@@ -23,6 +24,7 @@ const TutorialRoutes = () => (
 		<Route path='/tutorials/process_management/' component={ProcessManagement} />
 		<Route path='/tutorials/reloading_code/' component={ReloadingCode} />
 		<Route path='/tutorials/the_help_option/' component={TheHelpOption} />
+		<Route path='/tutorials/deploy_to_production/' component={DeployToProduction} />
 		<Route path='*' component={PageNotFound} />
 	</Switch>
 );

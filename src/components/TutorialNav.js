@@ -38,7 +38,7 @@ class TutorialNav extends Component {
 
 				<ul>
 					<span>Deployment</span>
-					<li>Deploy to production</li>
+					<li><NavLink to={'/tutorials/deploy_to_production/'} activeClassName="selected">Deploy to production</NavLink></li>
 					<li>Deploying updates</li>
 				</ul>
 			</div>

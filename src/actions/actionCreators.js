@@ -11,3 +11,17 @@ export function changeIntegration(integration) {
 		currentIntegration: integration
 	}
 }
+
+export function changeProviderChoice(provider) {
+	return {
+		type: 'CHANGE_PROVIDER_CHOICE',
+		currentProviderChoice: provider
+	}
+}
+
+export function changeEditionChoice(edition) {
+	return {
+		type: 'CHANGE_EDITION_CHOICE',
+		currentEditionChoice: edition
+	}
+}
