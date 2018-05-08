@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 
 import RadioChoices from '../RadioChoices';
+import NextStep from '../NextStep';
 
 class DeployToProduction extends Component {
 	componentDidMount() {
@@ -14,11 +15,20 @@ class DeployToProduction extends Component {
 		const header = `
 # Deploy to production`
 
+		const subTitle = `
+This is an end-to-end tutorial that teaches you how to install ${this.props.currentLanguage} and Passenger on a production server. This tutorial will ask you some questions, so the exact tutorial steps depend on the choices you make.`
+
 		return (
-			<div>
+			<div id="deploy-to-production">
 				<Markdown source={header} />
+				<Markdown source={subTitle} />
+				<h2>Select your deployment method</h2>
+				<p>Please start by selecting the hosting provider or infrastructure that you want to deploy to.</p>
 				<RadioChoices subject="provider" />
+				<h2>Open source or Enterprise?</h2>
+				<p>Please select the Passenger edition that you are using.</p>
 				<RadioChoices subject="edition" />
+				<NextStep name="Deployment installations" path="/tutorials/deploy_to_production/install/"></NextStep>
 			</div>
 		)
 	}

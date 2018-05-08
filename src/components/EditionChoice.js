@@ -17,26 +17,30 @@ class EditionChoice extends Component {
 		return (
 			<div>
 				<div>
-					<label>
-						<input 
-							type="radio" 
-							value="os" 
-							checked={this.props.currentEditionChoice === "os"} 
-							onChange={this.handleChange}
-						/>
-						Passenger open source
+					<input 
+						type="radio" 
+						value="os"
+						id="radio-os"
+						checked={this.props.currentEditionChoice === "os"} 
+						onChange={this.handleChange}
+					/>
+					<label htmlFor="radio-os">
+						<img src="/img/passenger_logo.svg" alt="open-source"/>
+						<p>Passenger open source</p>
 					</label>
 				</div>
 
 				<div>
-					<label>
-						<input 
-							type="radio" 
-							value="enterprise"
-							checked={this.props.currentEditionChoice === "enterprise"} 
-							onChange={this.handleChange}
-						/>
-						Passenger Enterprise
+					<input 
+						type="radio" 
+						value="enterprise"
+						id="radio-enterprise"
+						checked={this.props.currentEditionChoice === "enterprise"} 
+						onChange={this.handleChange}
+					/>
+					<label htmlFor="radio-enterprise">
+						<img src="/img/passenger_logo.svg" alt="enterprise"/>
+						<p>Passenger Enterprise</p>
 					</label>
 				</div>
 			</div>

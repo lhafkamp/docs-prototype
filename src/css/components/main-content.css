@@ -202,10 +202,14 @@
   margin-bottom: 35px;
 }
 
-#main-content label {
+#main-content #what-is-passenger label {
   font-size: 15px;
   background: #4EA0FF;
   color: #fff;
   padding: 2px 6px 2.5px;
   border-radius: 4px;
+}
+
+#main-content #deploy-to-production {
+  margin-bottom: 50px;
 }

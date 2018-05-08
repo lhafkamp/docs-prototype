@@ -19,68 +19,77 @@ class ProviderChoice extends Component {
 		return (
 			<div>
 				<div>
-					<label>
-						<input 
-							type="radio" 
-							value="AWS" 
-							checked={this.props.currentProviderChoice === "AWS"} 
-							onChange={this.handleChange}
-						/>
-						Amazon Web Services
+					<input 
+						type="radio" 
+						value="AWS" 
+						id="radio-aws"
+						checked={this.props.currentProviderChoice === "AWS"} 
+						onChange={this.handleChange}
+					/>
+					<label htmlFor="radio-aws">
+						<img src="/img/aws2.svg" alt="aws logo"/>
+
 					</label>
 				</div>
 
 				{isRuby ?
 					<div>
-						<label>
-							<input 
-								type="radio" 
-								value="Cloud66"
-								checked={this.props.currentProviderChoice === "Cloud66"} 
-								onChange={this.handleChange}
-							/>
-							Cloud 66
+						<input 
+							type="radio" 
+							value="Cloud66"
+							id="radio-cloud"
+							checked={this.props.currentProviderChoice === "Cloud66"} 
+							onChange={this.handleChange}
+						/>
+						<label htmlFor="radio-cloud">
+							<img src="/img/cloud66.svg" alt="cloud 66 logo"/>
+
 						</label>
 					</div>
 					: null
 				}
 
 				<div>
-					<label>
-						<input 
-							type="radio" 
-							value="DigitalOcean"
-							checked={this.props.currentProviderChoice === "DigitalOcean"} 
-							onChange={this.handleChange}
-						/>
-						Digital Ocean
+					<input 
+						type="radio" 
+						value="DigitalOcean"
+						id="radio-digitalocean"
+						checked={this.props.currentProviderChoice === "DigitalOcean"} 
+						onChange={this.handleChange}
+					/>
+					<label htmlFor="radio-digitalocean">
+						<img src="/img/ocean.svg" alt="digital ocean"/>
+
 					</label>
 				</div>
 
 				{isRuby ?
 					<div>
-						<label>
-							<input 
-								type="radio" 
-								value="Heroku"
-								checked={this.props.currentProviderChoice === "Heroku"} 
-								onChange={this.handleChange} 
-							/>
-							Heroku
-						</label>
-					</div>
-					: null
-				}
-
-				<div>
-					<label>
 						<input 
 							type="radio" 
-							value="LinuxUnix" 
-							checked={this.props.currentProviderChoice === "LinuxUnix"} 
+							value="Heroku"
+							id="radio-heroku"
+							checked={this.props.currentProviderChoice === "Heroku"} 
 							onChange={this.handleChange} 
 						/>
-						Generic Linux/Unix deployment tutorial
+						<label htmlFor="radio-heroku">
+							<img src="/img/heroku.svg" alt="heroku"/>
+
+						</label>
+					</div>
+					: null
+				}
+
+				<div>
+					<input 
+						type="radio" 
+						value="LinuxUnix"
+						id="radio-linux"
+						checked={this.props.currentProviderChoice === "LinuxUnix"} 
+						onChange={this.handleChange} 
+					/>
+					<label htmlFor="radio-linux">
+						<h3>(other)<br />Linux/Unix</h3>
 					</label>
 				</div>
 			</div>
