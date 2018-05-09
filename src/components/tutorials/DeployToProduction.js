@@ -28,7 +28,7 @@ This is an end-to-end tutorial that teaches you how to install ${this.props.curr
 				<h2>Open source or Enterprise?</h2>
 				<p>Please select the Passenger edition that you are using.</p>
 				<RadioChoices subject="edition" />
-				<NextStep name="Deployment installations" path="/tutorials/deploy_to_production/install/"></NextStep>
+				<NextStep name="Deployment installations" path="/tutorials/deploy_to_production/installations/"></NextStep>
 			</div>
 		)
 	}

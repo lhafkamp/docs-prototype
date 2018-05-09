@@ -25,6 +25,10 @@
   color: #35373B;
 }
 
+#tutorial-nav .back-btn {
+  margin-top: 30px;
+}
+
 #tutorial-nav .version {
   height: 17px;
   margin-bottom: 15px;
