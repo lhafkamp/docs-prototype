@@ -46,7 +46,7 @@ Passenger as application server, and Capistrano as release automation tool.
 Passenger integrates with Nginx or Apache and manages the application and its resources.
 
 <div>
-	<img src="/img/fundamentals_placeholder.png" alt="fit in stack"/>
+	<img src="/img/fundamentals.svg" alt="fit in stack"/>
 	<p class="sub-text">Passenger integrates with Nginx/Apache, allows the app to speak HTTP and manages the app's processes and resources. Capistrano automates releases.</p>
 </div>
 
@@ -156,7 +156,7 @@ When you deploy your web app to production, there are all sorts of components in
 In a typical production stack, one would use Nginx or Apache as the web server, Passenger as application server, and Fabric as release automation tool. Passenger integrates with Nginx or Apache and manages the application and its resources.
 
 <div>
-	<img src="/img/fundamentals_placeholder.png" alt="fit in stack"/>
+	<img src="/img/fundamentals.svg" alt="fit in stack"/>
 	<p class="sub-text">Passenger integrates with Nginx/Apache, allows the app to speak HTTP and manages the app's processes and resources. Capistrano automates releases.</p>
 </div>
 
