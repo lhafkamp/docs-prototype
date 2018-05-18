@@ -28,10 +28,12 @@ function MainTutorialContent() {
 }
 
 // render an isolated nav once you go to deployment
-function DeployContent() {
+function DeployContent(props) {
+	const installations = props.provider !== 'Heroku' ? <li><NavLink to={'/tutorials/deploy_to_production/installations/'} activeClassName="selected">Installations</NavLink></li> : null;
+
 	return (
 		<React.Fragment>
-			<li><NavLink to={'/tutorials/deploy_to_production/installations/'} activeClassName="selected">Installations</NavLink></li>
+			{installations}
 			<li><NavLink to={'/tutorials/deploy_to_production/deploying_your_app/'} activeClassName="selected">Deploying your app</NavLink></li>
 			<li><NavLink to={'/tutorials/deploy_to_production/deploying_updates/'} activeClassName="selected">Deploying updates</NavLink></li>
 			<li className="back-btn"><Link to="/tutorials/deploy_to_production" className="light-button">Back</Link></li>
@@ -40,8 +42,8 @@ function DeployContent() {
 }
 
 class TutorialNav extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			languages: ['Ruby', 'Python', 'Node', 'Meteor'],
 			integrations: ['Nginx', 'Apache', 'Standalone'],
@@ -67,7 +69,7 @@ class TutorialNav extends Component {
 	render() {
 		const mainTutorial = this.state.navState ? <MainTutorialContent /> : null;
 		const deployingUpdates = this.state.navState ?<li><NavLink to={'/tutorials/deploying_updates/'} activeClassName="selected">Deploying updates</NavLink></li> : null
-		const addDeployOptions = this.state.navState ? null : <DeployContent />
+		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
 			<div id="tutorial-nav">

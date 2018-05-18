@@ -6,7 +6,8 @@ import Main from './components/Main';
 function mapStateToProps(state) {
 	return {
 		currentLanguage: state.currentLanguage,
-		currentIntegration: state.currentIntegration
+		currentIntegration: state.currentIntegration,
+		currentProviderChoice: state.currentProviderChoice
 	}
 }
 
