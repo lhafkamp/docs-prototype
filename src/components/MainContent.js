@@ -12,6 +12,7 @@ import TheHelpOption from './tutorials/TheHelpOption';
 import DeployToProduction from './tutorials/DeployToProduction';
 import DeployInstallations from './tutorials/DeployInstallations';
 import DeployingYourApp from './tutorials/DeployingYourApp';
+import DeployUpdates from './tutorials/DeployUpdates';
 import PageNotFound from './PageNotFound';
 import '../css/components/main-content.css';
 
@@ -27,8 +28,10 @@ const TutorialRoutes = () => (
 		<Route path='/tutorials/reloading_code/' component={ReloadingCode} />
 		<Route path='/tutorials/the_help_option/' component={TheHelpOption} />
 		<Route exact path='/tutorials/deploy_to_production/' component={DeployToProduction} />
+		<Route path='/tutorials/deploy_updates/' component={DeployUpdates} />
 		<Route path='/tutorials/deploy_to_production/installations/' component={DeployInstallations} />
 		<Route path='/tutorials/deploy_to_production/deploying_your_app/' component={DeployingYourApp} />
+		<Route path='/tutorials/deploy_to_production/deploy_updates/' component={DeployUpdates} />
 		<Route path='*' component={PageNotFound} />
 	</Switch>
 );

@@ -35,7 +35,7 @@ function DeployContent(props) {
 		<React.Fragment>
 			{installations}
 			<li><NavLink to={'/tutorials/deploy_to_production/deploying_your_app/'} activeClassName="selected">Deploying your app</NavLink></li>
-			<li><NavLink to={'/tutorials/deploy_to_production/deploying_updates/'} activeClassName="selected">Deploying updates</NavLink></li>
+			<li><NavLink to={'/tutorials/deploy_to_production/deploy_updates/'} activeClassName="selected">Deploy updates</NavLink></li>
 			<li className="back-btn"><Link to="/tutorials/deploy_to_production" className="light-button">Back</Link></li>
 		</React.Fragment>
 	)
@@ -55,7 +55,7 @@ class TutorialNav extends Component {
 		// TODO switch || with 1 params
 		if (nextProps.choices.location.pathname === `/tutorials/deploy_to_production/installations/` ||
 				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploying_your_app/` ||
-				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploying_updates/`) {
+				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploy_updates/`) {
 			this.setState({
 				navState: false
 			});
@@ -68,7 +68,7 @@ class TutorialNav extends Component {
 
 	render() {
 		const mainTutorial = this.state.navState ? <MainTutorialContent /> : null;
-		const deployingUpdates = this.state.navState ?<li><NavLink to={'/tutorials/deploying_updates/'} activeClassName="selected">Deploying updates</NavLink></li> : null
+		const deployingUpdates = this.state.navState ?<li><NavLink to={'/tutorials/deploy_updates/'} activeClassName="selected">Deploying updates</NavLink></li> : null
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
