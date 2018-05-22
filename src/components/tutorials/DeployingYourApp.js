@@ -64,7 +64,7 @@ class DeployingYourApp extends Component {
 				<RubyHeroku />
 				<h3>All done!</h3>
 				<p>Congratulations, you have now deployed your app with Passenger!</p>
-				<NextStep name="Deploying updates" path="/deploy_to_production/deploying_your_app/"></NextStep>
+				<NextStep name="Deploying updates" path="/tutorials/deploy_to_production/deploy_updates/"></NextStep>
 			</div>
 		)
 	}

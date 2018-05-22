@@ -26,7 +26,7 @@ class Dropdown extends Component {
 		case 'Nginx':
 		case 'Apache':
 		case 'Standalone':
-			this.props.choices.changeIntegration(e.target.value)
+			this.props.choices.changeIntegration(e.target.value);
 			break;
 		}
 	}
