@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import queryString from 'query-string';
 
 import Dropdown from './Dropdown';
 import '../css/components/tutorial-nav.css';
@@ -47,7 +48,35 @@ class TutorialNav extends Component {
 		this.state = {
 			languages: ['Ruby', 'Python', 'Node', 'Meteor'],
 			integrations: ['Nginx', 'Apache', 'Standalone'],
-			navState: true
+			navState: true,
+			parsed: queryString.parse(this.props.choices.location.search)
+		}
+	}
+
+	componentWillMount() {
+		if (this.props.choices.location.search !== '') {
+			const parsed = queryString.parse(this.props.choices.location.search);
+			const languages = ['Ruby', 'Python', 'Node', 'Meteor'];
+			const integrations = ['Nginx', 'Apache', 'Standalone'];
+
+			if (!languages.includes(parsed.language)) {
+				parsed.language = 'Ruby';
+			}
+
+			if (!integrations.includes(parsed.integration)) {
+				parsed.integration = 'Nginx';
+			}
+
+			// order the dropdown selections based on the URL
+			const parsedLanguages = [parsed.language, ...languages]
+			const parsedIntegrations = [parsed.integration, ...integrations]
+			const languageArr = [...new Set(parsedLanguages)]
+			const integrationArr = [...new Set(parsedIntegrations)]
+			
+			this.setState({
+				languages: languageArr,
+				integrations: integrationArr
+			});
 		}
 	}
 
@@ -68,14 +97,14 @@ class TutorialNav extends Component {
 
 	render() {
 		const mainTutorial = this.state.navState ? <MainTutorialContent /> : null;
-		const deployingUpdates = this.state.navState ?<li><NavLink to={'/tutorials/deploy_updates/'} activeClassName="selected">Deploying updates</NavLink></li> : null
+		const deployingUpdates = this.state.navState ?<li><NavLink to={'/tutorials/deploy_updates/'} activeClassName="selected">Deploying updates</NavLink></li> : null;
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
 			<div id="tutorial-nav">
 				<img className="version" src="/img/version.png" alt="gem version"/>
-				<Dropdown choices={this.props.choices} name="language" default='Ruby' items={this.state.languages} />
-				<Dropdown choices={this.props.choices} name="integration" default='Nginx' items={this.state.integrations} />
+				<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
+				<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />
 
 				{mainTutorial}
 

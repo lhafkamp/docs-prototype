@@ -18,11 +18,19 @@
   font-size: 14px;
   color: #35373B;
   line-height: 28px;
+  cursor: pointer;
+}
+
+#tutorial-nav ul li:hover,
+#tutorial-nav ul li:focus {
+  opacity: .7;
 }
 
 #tutorial-nav ul li a {
   text-decoration: none;
   color: #35373B;
+  display: block;
+  height: 100%;
 }
 
 #tutorial-nav .back-btn {

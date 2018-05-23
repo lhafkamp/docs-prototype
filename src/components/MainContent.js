@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import queryString from 'query-string';
 
 import WhatIsPassenger from './tutorials/WhatIsPassenger';
 import FundamentalConcepts from './tutorials/FundamentalConcepts';
@@ -18,7 +19,8 @@ import '../css/components/main-content.css';
 
 const TutorialRoutes = () => (
 	<Switch>
-		<Route exact path='/tutorials/' component={WhatIsPassenger} />
+		<Route exact path='/' render={() => (<Redirect to='/tutorials/what_is_passenger/' /> )} />
+		<Route exact path='/tutorials/' render={() => (<Redirect to='what_is_passenger/' /> )} />
 		<Route path='/tutorials/what_is_passenger/' component={WhatIsPassenger} />
 		<Route path='/tutorials/fundamental_concepts/' component={FundamentalConcepts} />
 		<Route path='/tutorials/getting_started/' component={GettingStarted} />
@@ -37,9 +39,39 @@ const TutorialRoutes = () => (
 );
 
 class MainContent extends Component {
+	componentWillMount() {
+		const parsed = queryString.parse(this.props.choices.location.search);
+		const languages = ['Ruby', 'Python', 'Node', 'Meteor'];
+		const integrations = ['Nginx', 'Apache', 'Standalone'];
+
+		if (!languages.includes(parsed.language)) {
+			parsed.language = 'Ruby';
+		}
+
+		if (!integrations.includes(parsed.integration)) {
+			parsed.integration = 'Nginx';
+		}
+
+		this.props.choices.changeLanguage(parsed.language);
+		this.props.choices.changeIntegration(parsed.integration);
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.choices.currentLanguage !== this.props.choices.currentLanguage ||
+			prevProps.choices.currentIntegration !== this.props.choices.currentIntegration) {
+			this.props.choices.history.push({
+				pathname: this.props.choices.location.pathname,
+				search: queryString.stringify({ 
+					integration: this.props.choices.currentIntegration,
+					language: this.props.choices.currentLanguage,
+				})
+			});
+		}
+	}
+
 	render() {
 		return (
-			<div id="main-content">
+			<div id="main-content">	
 				<TutorialRoutes choices={this.props} />
 			</div>
 		);

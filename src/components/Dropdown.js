@@ -68,15 +68,41 @@ class Dropdown extends Component {
 
 	render() {
 		let style;
+		let logo = this.state.value;
+		const languages = ['Ruby', 'Python', 'Node', 'Meteor'];
+		const integrations = ['Nginx', 'Apache', 'Standalone'];
 
-		style = {
-			backgroundImage: `url(${this.state.style})`
+		if (this.props.name === 'language' && !languages.includes(this.state.value)) {
+			logo = 'Ruby'
 		}
 
-		if (this.state.value === 'Ruby') {
-			style = { backgroundImage: `url(/img/ruby.svg)` }
-		} else if (this.state.value === 'Nginx') {
-			style = { backgroundImage: `url(/img/nginx.svg)` }
+		if (this.props.name === 'integration' && !integrations.includes(this.state.value)) {
+			logo = 'Nginx'
+		}
+
+		switch (logo) {
+		default:
+		case 'Ruby':
+			style = { backgroundImage: `url(/img/ruby.svg)`};
+			break;
+		case 'Python':
+			style = { backgroundImage: `url(/img/python.svg)`};
+			break;
+		case 'Node':
+			style = { backgroundImage: `url(/img/node.svg)`};
+			break;
+		case 'Meteor':
+			style = { backgroundImage: `url(/img/meteor.svg)`};
+			break;
+		case 'Nginx':
+			style = { backgroundImage: `url(/img/nginx.svg)`};
+			break;
+		case 'Apache':
+			style = { backgroundImage: `url(/img/apache.svg)`};
+			break;
+		case 'Standalone':
+			style = { backgroundImage: `url(/img/passenger_logo.svg)`};
+			break;
 		}
 
 		return (
