@@ -94,7 +94,7 @@ Run 'passenger &lt;COMMAND&gt; --help' for more information about each command.<
 Many Passenger commands support subcommands. These subcommands, too, support \`--help\`. The above output already suggested that you can run \`passenger start --help\`:
 
 <pre class="highlight">
-<span><span class="prompt">$</span> passenger --help</span>
+<span><span class="prompt">$</span> passenger start --help</span>
 <span class="output">Usage: passenger start [DIRECTORY] [OPTIONS]
 Starts Passenger Standalone and serve one or more web applications.
 

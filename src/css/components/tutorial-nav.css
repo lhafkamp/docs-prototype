@@ -37,6 +37,16 @@
   margin-top: 30px;
 }
 
+#tutorial-nav ul .back-btn a {
+  display: inline;
+  height: auto;
+}
+
+#tutorial-nav ul .back-btn:hover,
+#tutorial-nav ul .back-btn:focus {
+  opacity: 1;
+}
+
 #tutorial-nav .version {
   height: 17px;
   margin-bottom: 15px;
