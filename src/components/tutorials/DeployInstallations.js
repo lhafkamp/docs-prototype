@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import queryString from 'query-string';
 
 import InstallLanguage from './InstallLanguage';
+import InstallPassenger from './InstallPassenger';
 import YesNoRadioButtons from '../YesNoRadioButtons';
 
 class DeployInstallations extends Component {
@@ -54,6 +55,7 @@ Before deploying your app you have to make sure that ${this.props.currentLanguag
 				<h2>Did you already install {this.props.currentLanguage}?</h2>
 				<YesNoRadioButtons choice={this.state.languageInstalled} action={this.handleChange} />
 				{installLanguageContent}
+				<InstallPassenger />
 			</div>
 		)
 	}

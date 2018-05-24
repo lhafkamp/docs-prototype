@@ -137,6 +137,11 @@ sudo apt-get install -y nodejs build-essential</pre>
 One thing you should be aware of when using RVM, is that you should use \`rvmsudo\` instead of \`sudo\` when executing Ruby-related commands. This is because RVM works by manipulating environment variables. However, sudo nukes all environment variables for security reasons, which intereferes with RVM.
 
 [Visit the RVM website to learn more about rvmsudo.](https://rvm.io/integration/sudo)
+
+<div class="language-installed">
+	<h3>All done!</h3>
+	<p>Congratulations, you have now installed Ruby!</p>
+</div>
 `
 
 	return (

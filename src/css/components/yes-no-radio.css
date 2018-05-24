@@ -1,5 +1,5 @@
 #yes-no-radio {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 #yes-no-radio label::before {
@@ -45,7 +45,7 @@
   left: -25px;
   width: 25px;
   height: 25px;
-  background-color: #EAEEF4;
+  background-color: #E9E9E9;
   border-radius: 50%;
 }
 

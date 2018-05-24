@@ -59,9 +59,12 @@ You can verify that it works by querying Passenger's version number:
 		const otherBody = `
 Installing Passenger for development is easy. We provide OS-specific installation packages to make your life easy.
 
-<p><select id="os_install_select">
-  <option value="osx">macOS</option>
-</select></p>
+<div>
+	<select id="os_install_select">
+		<option value="osx">macOS</option>
+	</select>
+	<span class="arrow-down"></span>
+</div>
 
 <div class="install_os install_os_osx">
   <p>
