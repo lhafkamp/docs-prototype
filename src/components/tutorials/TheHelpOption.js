@@ -70,7 +70,7 @@ Server options:
 So if you want to know what a command does and whether its behavior can be modified, please do not hestitate to pass \`--help\`.
 `
 
-		const pythonBody = `
+		const pythonNodeBody = `
 <a name="help_option"></a>
 
 ## The \`--help\` option
@@ -113,7 +113,8 @@ So if you want to know what a command does and whether its behavior can be modif
 			body = rubyBody;
 			break;
 		case 'Python':
-			body = pythonBody;
+		case 'Node':
+			body = pythonNodeBody;
 			break;
 		}
 

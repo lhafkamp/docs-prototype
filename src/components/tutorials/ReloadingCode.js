@@ -117,8 +117,8 @@ Deactivate this mechanism by removing the file:
 Congratulations, you have almost reached the conclusion of this basics tutorial. Next, we will teach you how to get help in case you need it.`
 		
 
-		const pythonBody = `
-When developing a web application, you will often want your code changes to take effect as soon as possible. In this section we will discuss code reloading mechanisms that Passenger makes available, and how they compare to code reloading mechanisms provided by Python web frameworks.
+		const pythonNodeBody = `
+When developing a web application, you will often want your code changes to take effect as soon as possible. In this section we will discuss code reloading mechanisms that Passenger makes available, and how they compare to code reloading mechanisms provided by ${this.props.currentLanguage} web frameworks.
 
 Some frameworks provide built-in code reloading mechanisms. They usually work by polling files changes and re-evaluating those files. Such mechanisms are much faster than restarting the server. Restarting the server may take a few seconds, but builtin reloading take a few miliseconds. But they have a drawback too: not all code can be reloaded, especially initialization-related code.
 
@@ -205,7 +205,8 @@ Congratulations, you have almost reached the conclusion of this basics tutorial.
 			body = rubyBody;
 			break;
 		case 'Python':
-			body = pythonBody;
+		case 'Node':
+			body = pythonNodeBody;
 			break;
 		}
 

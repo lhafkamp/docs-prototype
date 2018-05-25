@@ -223,7 +223,7 @@ Requests in top-level queue : 0
     CPU: 0%      Memory  : 14M     Last used: 6m 1s ago</span></pre>
 `
 
-		const pythonBody = `
+		const pythonNodeBody = `
 ## Introduction
 
 You have learned in [Fundamental concepts](fundamental_concepts.html) that at its core, Passenger is a process manager. Instead of running an application inside its process space, Passenger launches the application as external processes, and manages them. Passenger load balances traffic between processes, shuts down processes when they're no longer needed or when they misbehave, keeps them running and restarts them when they crash, etc.
@@ -423,7 +423,8 @@ Requests in top-level queue : 0
 			body = rubyBody;
 			break;
 		case 'Python':
-			body = pythonBody;
+		case 'Node':
+			body = pythonNodeBody;
 			break;
 		}
 		
