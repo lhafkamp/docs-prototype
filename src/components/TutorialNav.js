@@ -17,7 +17,7 @@ function MainTutorialContent() {
 
 			<ul>
 				<span>Getting started</span>
-				<li><NavLink to={'/tutorials/getting_started/'} activeClassName="selected">Quickstart</NavLink></li>
+				<li><NavLink to={'/tutorials/quickstart/'} activeClassName="selected">Quickstart</NavLink></li>
 				<li><NavLink to={'/tutorials/installation/'} activeClassName="selected">Installation</NavLink></li>
 				<li><NavLink to={'/tutorials/the_passenger_command/'} activeClassName="selected">The ‘passenger’ command</NavLink></li>
 				<li><NavLink to={'/tutorials/process_management/'} activeClassName="selected">Process management</NavLink></li>

@@ -5,7 +5,7 @@ import queryString from 'query-string';
 
 import NextStep from '../NextStep';
 
-class GettingStarted extends Component {
+class Quickstart extends Component {
 	componentWillMount() {
 		this.props.history.push({
 			pathname: this.props.location.pathname,
@@ -230,4 +230,4 @@ function mapStateToProps(state) {
 	}
 }
 
-export default connect(mapStateToProps)(GettingStarted)
+export default connect(mapStateToProps)(Quickstart)

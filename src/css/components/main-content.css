@@ -85,7 +85,7 @@
   border-radius: 4px;
   margin-top: 0;
   margin-bottom: 20px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 #main-content pre::before {
