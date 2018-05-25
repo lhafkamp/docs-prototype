@@ -79,7 +79,7 @@ Installing Passenger for development is easy. We provide OS-specific installatio
 
 ## Installation in production
 
-Installation in production is a bit different. We will cover that later in the <a href="../../deploy/python/">deployment tutorial</a>.
+Installation in production is a bit different. We will cover that later in the [deployment tutorial](/tutorials/deploy_to_production/).
 `
 
 		switch (this.props.currentLanguage) {
