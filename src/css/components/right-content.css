@@ -3,7 +3,7 @@
   width: 292px;
 }
 
-@media(max-width: 1220px) {
+@media(max-width: 1260px) {
   #right-content {
     display: none;
   }
