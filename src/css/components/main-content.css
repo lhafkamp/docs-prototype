@@ -276,3 +276,10 @@
 #main-content .language-installed {
   margin-bottom: 80px;
 }
+
+#main-content .img-thumbnail {
+  margin: 20px 0;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

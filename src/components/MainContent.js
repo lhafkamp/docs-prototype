@@ -13,6 +13,7 @@ import TheHelpOption from './tutorials/TheHelpOption';
 import DeployToProduction from './tutorials/DeployToProduction';
 import DeployInstallations from './tutorials/DeployInstallations';
 import DeployingYourApp from './tutorials/DeployingYourApp';
+import LaunchServer from './tutorials/LaunchServer';
 import DeployUpdates from './tutorials/DeployUpdates';
 import PageNotFound from './PageNotFound';
 import '../css/components/main-content.css';
@@ -34,6 +35,7 @@ const TutorialRoutes = () => (
 		<Route path='/tutorials/deploy_to_production/installations/' component={DeployInstallations} />
 		<Route path='/tutorials/deploy_to_production/deploying_your_app/' component={DeployingYourApp} />
 		<Route path='/tutorials/deploy_to_production/deploy_updates/' component={DeployUpdates} />
+		<Route path='/tutorials/deploy_to_production/launch_server/' component={LaunchServer} />
 		<Route path='*' component={PageNotFound} />
 	</Switch>
 );

@@ -30,11 +30,26 @@ function MainTutorialContent() {
 
 // render an isolated nav once you go to deployment
 function DeployContent(props) {
-	const installations = props.provider !== 'Heroku' ? <li><NavLink to={'/tutorials/deploy_to_production/installations/'} activeClassName="selected">Installations</NavLink></li> : null;
+	let providerContent;
+
+	switch (props.provider) {
+	case 'DigitalOcean':
+		providerContent = 
+		<React.Fragment>
+			<li><NavLink to={'/tutorials/deploy_to_production/launch_server/'} activeClassName="selected">Launch server</NavLink></li>
+			<li><NavLink to={'/tutorials/deploy_to_production/installations/'} activeClassName="selected">Installations</NavLink></li>
+		</React.Fragment>
+		break;
+	case 'Heroku':
+		providerContent = null;
+		break;
+	default: 
+		providerContent = <li><NavLink to={'/tutorials/deploy_to_production/installations/'} activeClassName="selected">Installations</NavLink></li>
+	}
 
 	return (
 		<React.Fragment>
-			{installations}
+			{providerContent}
 			<li><NavLink to={'/tutorials/deploy_to_production/deploying_your_app/'} activeClassName="selected">Deploying your app</NavLink></li>
 			<li><NavLink to={'/tutorials/deploy_to_production/deploy_updates/'} activeClassName="selected">Deploy updates</NavLink></li>
 			<li className="back-btn"><Link to="/tutorials/deploy_to_production" className="light-button">Back</Link></li>
@@ -84,7 +99,8 @@ class TutorialNav extends Component {
 		// TODO switch || with 1 params
 		if (nextProps.choices.location.pathname === `/tutorials/deploy_to_production/installations/` ||
 				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploying_your_app/` ||
-				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploy_updates/`) {
+				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploy_updates/` ||
+				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/launch_server/`) {
 			this.setState({
 				navState: false
 			});
