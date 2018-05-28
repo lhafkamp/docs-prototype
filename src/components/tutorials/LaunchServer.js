@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
+import queryString from 'query-string';
 
 import NextStep from '../NextStep';
 
 class LaunchServer extends Component {
+	componentWillMount() {
+		this.props.history.push({
+			pathname: this.props.location.pathname,
+			search: queryString.stringify({ 
+				integration: this.props.currentIntegration,
+				language: this.props.currentLanguage,
+			})
+		});
+	}
+
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		const body = `
 # Launching a server on Digital Ocean

@@ -54,11 +54,20 @@
   margin-top: 40px;
 }
 
+#main-content table {
+  width: 100%;
+  table-layout: fixed;
+}
+
 #main-content td {
   border: 1px solid rgb(221, 221, 221);
   padding: 8px;
   display: table-cell;
   vertical-align: top;
+}
+
+#main-content td:first-of-type {
+  width: 20%;
   font-size: 14px;
 }
 
@@ -274,7 +283,7 @@
 }
 
 #main-content .language-installed {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 #main-content .img-thumbnail {
