@@ -19,13 +19,15 @@ class DeployingYourApp extends Component {
 	}
 
 	render() {
+		let body = '';
+
 		const header = `
 # Deploying application updates`
 
 		const subTitle = `
 In the previous step, you deployed an application to your production server for the first time. But what do you do when you have updated your app, and need to deploy updates? You will learn that on this page.`
 
-		const body = `
+		const rubyBody = `
 <h2>1 Transferring latest code</h2>
 
 <h3>1.1 Login to the server as the application's user</h3>
@@ -76,6 +78,43 @@ In the previous step, you deployed an application to your production server for 
 
 <pre class="highlight"><span class="prompt">$ </span>bundle exec passenger-config restart-app $(pwd)</pre>
 `
+
+		const nodeBody = `
+<h2>1 Transferring latest code</h2>
+
+<h3>1.1 Login to the server as the application's user</h3>
+<p>Login to your server with SSH:</p>
+<pre class="highlight"><span class="prompt">local-computer$ </span>ssh <span class="o">myappuser</span>@yourserver.com</pre>
+<p>
+  Replace <code>myappuser</code> with name of the application's OS user account.
+</p>
+
+<div class="info">Starting from this point, unless stated otherwise, all commands that we instruct you to run should be run on the server, not on your local computer!</div>
+
+<h3>1.2 Pull latest code from Git</h3>
+
+<p>
+  Go to your application's code directory on the server, then use Git to pull the latest code:
+</p>
+
+<pre class="highlight"><span class="prompt">$ </span>cd /var/www/<span class="o">myapp</span>/code
+<span class="prompt">$ </span>git pull</pre>
+
+<h2>2 Prepare application</h2>
+<h3>2.1 Install app dependencies</h3>
+<p>
+  Your application's npm dependencies may have changed, so we should install any updated npm dependencies while removing any now-extraneous dependencies. Run:
+</p>
+<pre class="highlight"><span class="prompt">$ </span>npm install --production
+<span class="prompt">$ </span>npm prune --production</pre>
+
+<h2>3 Restart application</h2>
+<p>
+  Passenger may still be serving an old instance of your application. Now that all application updates have been prepared, tell Passenger to restart your application so that the updates take effect.
+</p>
+
+<pre class="highlight"><span class="prompt">$ </span>passenger-config restart-app $(pwd)</pre>
+`
 		
 		const conclusion = `
 ## Conclusion
@@ -83,8 +122,17 @@ In the previous step, you deployed an application to your production server for 
 Congratulations, you have successfully deployed your web application using Passenger!
 
 To fully master Passenger, please take a look at the [advanced guides](/advanced/).
-
 `
+
+		switch (this.props.currentLanguage) {
+		default:
+		case 'Ruby':
+			body = rubyBody;
+			break;
+		case 'Node':
+			body = nodeBody;
+			break;
+		}
 
 		return (
 			<div>
