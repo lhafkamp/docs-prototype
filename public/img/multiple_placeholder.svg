@@ -9,7 +9,7 @@
             <stop stop-color="#4CBCCA" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
-            <stop stop-color="#42729D" offset="0%"></stop>
+            <stop stop-color="#1FB4D5" offset="0%"></stop>
             <stop stop-color="#2A5B87" offset="100%"></stop>
         </linearGradient>
     </defs>
@@ -62,7 +62,7 @@
                         <tspan x="37" y="13">Passenger</tspan>
                     </text>
                 </g>
-                <rect id="Rectangle-3" fill="#6797C2" x="22" y="63" width="116" height="37" rx="5"></rect>
+                <rect id="Rectangle-3" fill="#325A7E" x="22" y="63" width="116" height="37" rx="5"></rect>
                 <text id="Builtin-web-server" font-family="Interface-Medium, Interface" font-size="12" font-weight="400" letter-spacing="-0.300000012" fill="#FFFFFF">
                     <tspan x="32.4485797" y="85">Builtin web server</tspan>
                 </text>

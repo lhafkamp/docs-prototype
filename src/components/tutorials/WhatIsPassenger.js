@@ -28,7 +28,8 @@ It handles HTTP requests, manages processes and resources, and enables administr
 monitoring and problem diagnosis.
 `
 		
-		const body = `Passenger is very easy to use, makes deploying in production much easier and is scalable. If 
+		const body = `
+Passenger is very easy to use, makes deploying in production much easier and is scalable. If 
 you aren't already familiar with the benefits, you can [learn more about them](https://www.phusionpassenger.com/advantages).
 
 Passenger supports multiple programming languages, of which ${this.props.currentLanguage} is one. 
