@@ -3,6 +3,8 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+import TableOfContents from '../TableOfContents';
 import NextStep from '../NextStep';
 
 class ThePassengerCommand extends Component {
@@ -449,7 +451,9 @@ All command line options have a configuration file equivalent. Just omit the ini
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
+				<TableOfContents />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="Process management" path="/tutorials/process_management/" />
 			</div>

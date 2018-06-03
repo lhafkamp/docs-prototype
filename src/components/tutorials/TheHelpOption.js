@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
 import NextStep from '../NextStep';
 
 class TheHelpOption extends Component {
@@ -121,6 +122,7 @@ So if you want to know what a command does and whether its behavior can be modif
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="Deploy to production" path="/tutorials/deploy_to_production/" />

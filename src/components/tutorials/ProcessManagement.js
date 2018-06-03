@@ -3,6 +3,8 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+import TableOfContents from '../TableOfContents';
 import NextStep from '../NextStep';
 
 class ProcessManagement extends Component {
@@ -431,7 +433,9 @@ Requests in top-level queue : 0
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
+				<TableOfContents />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="Reloading code" path="/tutorials/reloading_code/" />
 			</div>

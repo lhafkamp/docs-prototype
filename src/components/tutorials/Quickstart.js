@@ -3,6 +3,8 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+import TableOfContents from '../TableOfContents';
 import NextStep from '../NextStep';
 
 class Quickstart extends Component {
@@ -301,7 +303,9 @@ The second way is by starting a seperate terminal, changing the working director
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
+				<TableOfContents />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="Installation" path="/tutorials/installation/" />
 			</div>

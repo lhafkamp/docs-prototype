@@ -3,6 +3,8 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+
 class DeployingYourApp extends Component {
 	componentWillMount() {
 		this.props.history.push({
@@ -137,6 +139,7 @@ To fully master Passenger, please take a look at the [advanced guides](/advanced
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
 				<Markdown escapeHtml={false} source={body} />
 				<Markdown source={conclusion} />

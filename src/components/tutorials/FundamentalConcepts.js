@@ -3,9 +3,18 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+import TableOfContents from '../TableOfContents';
 import NextStep from '../NextStep';
 
 class FundamentalConcepts extends Component {
+	constructor() {
+		super();
+		this.state = {
+			headers: ''
+		}
+	}
+
 	componentWillMount() {
 		this.props.history.push({
 			pathname: this.props.location.pathname,
@@ -34,8 +43,9 @@ We give you a basic understanding of what Passenger is. We also explain
 how Passenger fits in the stack and how it compares to other software that you may use.`
 
 		const rubyBody = `
-## Passenger and "rails server"
-"The Ruby on Rails framework provides a builtin server tool, 
+<h2 id="passenger-and-rails-server">Passenger and "rails server"</h2>
+
+The Ruby on Rails framework provides a builtin server tool, 
 which you can access with the 'rails server' command. The \`rails server\`
 is not an application server by itself, but just a small wrapper that 
 launches your application in an application server. This is why people 
@@ -366,7 +376,9 @@ Passenger does many things, but some things are currently out of scope.
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
+				<TableOfContents />
 				<Markdown source={body} escapeHtml={false} />
 				<NextStep name="Quickstart" path="/tutorials/quickstart" />
 			</div>

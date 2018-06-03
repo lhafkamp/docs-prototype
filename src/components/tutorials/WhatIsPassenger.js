@@ -22,9 +22,6 @@ class WhatIsPassenger extends Component {
 	}
 
 	render() {
-		const header = `
-# What is Passenger?`;
-
 		const subTitle = `
 Phusion Passenger is an <label>open source</label> **web application server**. 
 It handles HTTP requests, manages processes and resources, and enables administration, 
@@ -39,7 +36,7 @@ Passenger can also serve multiple applications at the same time (it is multitena
 
 		return (
 			<div id="what-is-passenger">
-				<Markdown source={ header } />
+				<h1 className="solo-h1">What is Passenger?</h1>
 				<Markdown escapeHtml={false} source={ subTitle } />
 				<ReactPlayer className="video-player" url='https://player.vimeo.com/external/224923750.hd.mp4?s=6931550c8a2bedabba0822a6ec7966c45ee1fbc4&profile_id=174" type="video/mp4' controls />
 				<p className="video-sub-text">Phusion Passenger - the smart app server</p>

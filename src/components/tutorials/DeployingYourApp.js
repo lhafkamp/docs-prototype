@@ -7,7 +7,7 @@ import NextStep from '../NextStep';
 
 function RubyHeroku() {
 	const body = `
-# Deploying your Ruby app on a Heroku production server
+<h1 class="solo-h1">Deploying your Ruby app on a Heroku production server</h1>
 
 ### Add "passenger" to your gem bundle
 
@@ -56,7 +56,7 @@ Commit and deploy to Heroku:
 
 function NodeDigitalOcean() {
 	const body = `
-# Deploying a Node.js app on a Digital Ocean production server
+<h1 class="solo-h1">Deploying a Node.js app on a Digital Ocean production server</h1>
 
 On this page you will learn how you can deploy your app to a server that is running Passenger.
 You can either follow these instructions with your own app, or you can use <a href="https://github.com/phusion/passenger-nodejs-connect-demo">the sample Connect.js app</a> we prepared.
@@ -203,6 +203,7 @@ myappuser$ ...</span>
 Replace \`yourserver.com\` with your server's host name, replace \`/var/www/myapp/code\` with your application's code directory path and replace \`app.js\` with your app's entry point file.
 
 When you are done, restart Nginx:
+<pre class="highlight"><span class="prompt">$ </span>sudo service nginx restart</pre>
 
 ### 3.3 Test drive
 

@@ -3,6 +3,8 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
+import TableOfContents from '../TableOfContents';
 import NextStep from '../NextStep';
 
 class ReloadingCode extends Component {
@@ -213,6 +215,8 @@ Congratulations, you have almost reached the conclusion of this basics tutorial.
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
+				<TableOfContents />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="The 'Help' option" path="/tutorials/the_help_option/" />
 			</div>

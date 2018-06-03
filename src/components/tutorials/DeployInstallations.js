@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
 import InstallLanguage from './InstallLanguage';
 import InstallPassenger from './InstallPassenger';
 import YesNoRadioButtons from '../YesNoRadioButtons';
@@ -51,6 +52,7 @@ Before deploying your app you have to make sure that ${this.props.currentLanguag
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
 				<h2>Did you already install {this.props.currentLanguage}?</h2>
 				<YesNoRadioButtons choice={this.state.languageInstalled} action={this.handleChange} />

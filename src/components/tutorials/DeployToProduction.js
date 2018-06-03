@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
 import RadioChoices from '../RadioChoices';
 import NextStep from '../NextStep';
 
@@ -54,6 +55,7 @@ This is an end-to-end tutorial that teaches you how to install ${this.props.curr
 		return (
 			<div id="deploy-to-production">
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown source={subTitle} />
 				<h2>Select your deployment method</h2>
 				<p>Please start by selecting the hosting provider or infrastructure that you want to deploy to.</p>

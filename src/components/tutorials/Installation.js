@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
+import CurrentSelection from '../CurrentSelection';
 import NextStep from '../NextStep';
 
 class Installation extends Component {
@@ -97,6 +98,7 @@ Installation in production is a bit different. We will cover that later in the [
 		return (
 			<div>
 				<Markdown source={header} />
+				<CurrentSelection />
 				<Markdown escapeHtml={false} source={body} />
 				<NextStep name="The 'Passenger' command" path="/tutorials/the_passenger_command/" />
 			</div>

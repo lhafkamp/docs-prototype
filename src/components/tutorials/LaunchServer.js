@@ -22,7 +22,7 @@ class LaunchServer extends Component {
 
 	render() {
 		const body = `
-# Launching a server on Digital Ocean
+<h1 class="solo-h1">Launching a server on Digital Ocean</h1>
 
 <div class="info">
   This page describes how to launch a server on <strong>Digital Ocean</strong>. Is this not the infrastructure that you are using? <a href="/walkthroughs/deploy/#{language_type}/index.html">Go back to the infrastructure selection page.</a>

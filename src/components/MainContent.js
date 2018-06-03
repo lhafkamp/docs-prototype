@@ -73,7 +73,7 @@ class MainContent extends Component {
 
 	render() {
 		return (
-			<div id="main-content">	
+			<div id="main-content">
 				<TutorialRoutes choices={this.props} />
 			</div>
 		);
