@@ -23,7 +23,7 @@
 
 #tutorial-nav ul li:hover,
 #tutorial-nav ul li:focus {
-  opacity: .7;
+  text-decoration: underline;
 }
 
 #tutorial-nav ul li a {
@@ -44,7 +44,7 @@
 
 #tutorial-nav ul .back-btn:hover,
 #tutorial-nav ul .back-btn:focus {
-  opacity: 1;
+  text-decoration: none;
 }
 
 #tutorial-nav .version {
