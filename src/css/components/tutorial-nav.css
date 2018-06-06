@@ -1,6 +1,11 @@
 #tutorial-nav {
   margin-top: 5px;
-  position: fixed;
+}
+
+@media(min-height: 700px) {
+  #tutorial-nav {
+    position: fixed;
+  }
 }
 
 #tutorial-nav span {
