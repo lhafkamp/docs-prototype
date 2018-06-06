@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <svg width="154px" height="39px" viewBox="0 0 154 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+=======
+<svg width="154px" height="40px" viewBox="0 0 154 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+>>>>>>> 948f08a6a1f10ea7c562473f5402b9a9934401cd
     <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
     <title>Group 7</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="wireframes-tut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<<<<<<< HEAD
         <g id="Desktop-HD-Copy-11" transform="translate(-1077.000000, -415.000000)">
             <g id="Group-7" transform="translate(1077.000000, 413.000000)">
                 <g id="feedback-copy">
@@ -16,6 +21,25 @@
                     </g>
                     <g id="No" transform="translate(74.000000, 26.000000)" fill="#35373B">
                         <path d="M7.12499321,3.00000763 L7.12499321,11 L6.1874941,11 L1.98437311,4.73438098 L1.90624818,4.73438098 L1.90624818,11 L0.937499106,11 L0.937499106,3.00000763 L1.87499821,3.00000763 L6.09374419,9.29687662 L6.17186911,9.29687662 L6.17186911,3.00000763 L7.12499321,3.00000763 Z M11.3124969,11.1249999 C9.68749845,11.1249999 8.59374949,9.89062606 8.59374949,8.03125283 C8.59374949,6.15625462 9.68749845,4.9218808 11.3124969,4.9218808 C12.9374954,4.9218808 14.0312443,6.15625462 14.0312443,8.03125283 C14.0312443,9.89062606 12.9374954,11.1249999 11.3124969,11.1249999 Z M11.3124969,10.2968757 C12.5468707,10.2968757 13.1093702,9.23437668 13.1093702,8.03125283 C13.1093702,6.82812898 12.5468707,5.75000501 11.3124969,5.75000501 C10.0781231,5.75000501 9.51562361,6.82812898 9.51562361,8.03125283 C9.51562361,9.23437668 10.0781231,10.2968757 11.3124969,10.2968757 Z"></path>
+=======
+        <g id="Desktop-HD-Copy-11" transform="translate(-1077.000000, -414.000000)">
+            <g id="Group-7" transform="translate(1077.000000, 413.000000)">
+                <g id="feedback-copy">
+                    <g id="Was-this-article-hel" fill="#35373B" font-family="InterUI-Regular, Inter UI" font-size="14" font-weight="normal">
+                        <text>
+                            <tspan x="0" y="13">Was this article helpful?</tspan>
+                        </text>
+                    </g>
+                    <g id="Yes" transform="translate(20.000000, 26.000000)" fill="#35373B" font-family="InterUI-Regular, Inter UI" font-size="11" font-weight="normal">
+                        <text>
+                            <tspan x="0" y="11">Yes</tspan>
+                        </text>
+                    </g>
+                    <g id="No" transform="translate(74.000000, 26.000000)" fill="#35373B" font-family="InterUI-Regular, Inter UI" font-size="11" font-weight="normal">
+                        <text>
+                            <tspan x="0" y="11">No</tspan>
+                        </text>
+>>>>>>> 948f08a6a1f10ea7c562473f5402b9a9934401cd
                     </g>
                     <image id="sendgrid.com_docs_User_Guide_index.html" x="0" y="25" width="16" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAABGdBTUEAALGOGCHvlwAAA5xJREFUWAnVmVtPE0EYhr+OpS1yaAsFW4mAeIJosKgJQSWGC0MiCRfGG0288R/5FzTxymhCggnRSAxqovFAiKYeQdFa5FgKaikI7rtx1+0wu93drix9b7o7s/PN08nszDfvejYkkU2trq/R+PIXmvyRoqlfs7SQW6SltZ+0sp6TI/qZj6q8OynsC1K0PEKNFTFqqdxDZcxrs0cijx3gt5kJGl14Q68XP9jq+HBwP8XDrXSoeq/l9paAx9Lv6NH0C0plZyx3JGoQC9TRqfpj1B46KKoWlpkCns7O09C3h/R++bMwSLGFByqbqHf3aaoP1BQMVRD42dwrGkgOFwzkxAP9DT10ovaIYShD4LupxzQy89wwgNOV3XXH6WzspG5YXeDB5AN6Mjem2/B/VnTWtlNfwxlhF0xUipF1CxY86BsMIm0Cxpzd6mkgAgMDWHjlAWM12KoXjAcR3YMFTFrlAWPpckKBHX7q2dVJXZGjRYfjmdQ9EpuCU+vsuVg3xWvaZFhsDre+3rMNDiawKZuLOsLYwZxSyF+thlLA1QIbF1o2GRi5gVPbLXii5XU2sPSbgA2MkAyMRMYphcqqKSBlaU5LYWRIEe1mXSKojr9zV6lL5zLKZVG/YAQrQz7rlLA68CtDenXJqfBy7s2QfDulS819BGitJpaT2tuirsHqxUmhWAHyYlMfNVc0CEPplU9lZyn7e0XYRlQIVs/VxLWN2VxaVG9YBshoIEJtwRbqCLdtGlnDxprKl/MJum1ynY74QuTFGcysruw7rzuKZmPwz+ElHf7+lNKrhV9OsDLlwMgH2o73YFV3OrcAzY6uwsdwFHdTmMNmBVYG38BN8cugEQtYGUwOtzQqje6UBcsArAyOjFu6L60OVgRWBvvILYX9VZa6BiuD1+WGsGtZ3bbBymDMwevaat34NGipSzCCVT4iwZgzk2LeSY5Qudcn5bsB2Y3EGx6T5pVermBEhOlgZndTYoARkoHhIuLsVejUoX2jE5mPSiw5j+iKxKWcopVCvn/HI/UB7gI5cspC0gU2xelUnR8c9G5ODnGhrd9GpeBhCVpv9QFsIjNuKUu70NirHkJVYKBdHx9w7ORs/a+KW8DZvNzSr1bm5RKwPLebeKY8YPizsDy3i8DCe8Z5wACFPwvL022BQeQVbwIGKPxZWJ5uCX3recR5Lx0PWFKGtgJfUp8MFOiS+iijQOO3ZD57aaFxXTIfFnlwNz7d/gEUcZ7dlmgknAAAAABJRU5ErkJggg=="></image>
                     <image id="sendgrid.com_docs_User_Guide_index.html-(1)" x="55" y="26" width="15" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAABGdBTUEAALGOGCHvlwAAA95JREFUWAnVmVtIFFEYx7/dFlkzzUurJtnaQtZmIVFGEWYRBYIIkRhRBJFQz/XgU0+91EO9+GCBFUXRYyCSUESaRNGFklotg9zV8Lbe8raLXed/aNaZ6ezuzOzZhv3D7J7rd347e+ac73xj+y2JTOjX4iJNvO+m6b5PNBvwU3h0hMLfpulnOMysLXM6ybkym5wFhZTpLqHs0g2Ut6Wc7GlpJkZb6mIzChx884qGuzpp9OULIqO/1Wajgh07aXVlFbm2VSxRGEjpBh551kWBtlaa8X8xYD5606wSD7lraqlwd2X0RpyauMBzgwPUd/c2TXS/5XRPvCivfCuVHjtBK4rX6jIWE/jr40fUe/2a8b9e19CKRtJU8Z46TWv2H1AU8pNRgT/fu0P+1vv8XkkqLak9ROuPHo9pnQv88WYLDT5sj9kxWZXFB6tp48mGqObt2hrcWatgwYKxwRBNKmDM2f89DXhgYAALTxFgrAbsAeO1sqAMLGDSKgKMpcvwRqC1JjIvbUqMSWOTAWNTSNY6qxnPUBZMYFPKgQx2MCNyLM+g/O0VlO4q4HabDfTT9/l5mur1ceuNFIJNuRs64BsY2W4BW9nUTPiOp1BwjIY7OyjQ3kY/FubjNefWgw2Msu/hgCNjRFmS56UHFjbTXfnkqatn12SPj+b8/RL4AoWCo9IVZGn8G/EExggw87ri9VDUh8aDipz+ZO6mMsKl1FRPD72+cF5ZxE2DEe4sXFO70ZWh/Fwj12hSC6UVA743FFnW9AyY6y1jzrietqLb4KAAGQI2Ox1EwONUAxkC9tQdYZ2s+MARDNINnOleR0V79rJOVnzgvAjpBja7jor6cfLhVjdwUdU+UWMnZEcXMNsADtcnNFCinRE2gHQBJzqYiP6IcUDM+YlnED7B0NMO0w8dtuMByZ+Y8n2gGWl5MvM8ICCjGxgNfc1N9OnWDYIvwVNO2WbycKYNtt93ly+aglSOg+gRpOsOs5bSB+7MZBSXEcBa6fUVtP14eYS6IDtJMQERyvGqgTENcGeFSGJEXA6yI9YlQun5LpUZzFkzc1Vl5G8GjHIQ0Y7AnAg5V6mBhzqfiDDLbCgZ7XCMEZgTqbDkM2NlESGwyc477LF1GFFEkQqNmXPyeQxaNgaMQx6iiIkI67Ss0LiYuwsm5QEU9iOxNQQtnjeeTSg24a6uIUdGBgUeCHjgpJVh16Ur/4RhI8CgZ+HVlqtIWi5vwxlu+FXlSyA+i5Cn1QJDtFixChigiM8i5GmVMHasGLFqSighUyqgLYOn1CsDGTqlXsrI0PhOmddeSmikU+bFohbcqle3fwC9lcdDoAj54gAAAABJRU5ErkJggg=="></image>
