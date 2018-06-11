@@ -96,7 +96,6 @@ class TutorialNav extends Component {
 	}
 
 	componentWillReceiveProps(nextProps){
-		// TODO switch || with 1 params
 		if (nextProps.choices.location.pathname === `/tutorials/deploy_to_production/installations/` ||
 				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploying_your_app/` ||
 				nextProps.choices.location.pathname === `/tutorials/deploy_to_production/deploy_updates/` ||
