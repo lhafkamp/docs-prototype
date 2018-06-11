@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
@@ -39,21 +38,14 @@ class DeployInstallations extends Component {
 	}
 
 	render() {
-		// markdown variables
-		const header = `
-# Deployment: installations`
-
-		const subTitle = `
-Before deploying your app you have to make sure that ${this.props.currentLanguage} and Passenger are installed.`
-
 		// show content if the user didn't install a language yet
 		const installLanguageContent = this.state.languageInstalled === 'yes' ? null : <InstallLanguage />;
 
 		return (
 			<div>
-				<Markdown source={header} />
+				<h1>Deployment: installations</h1>
 				<CurrentSelection />
-				<Markdown source={subTitle} />
+				<p>Before deploying your app you have to make sure that {this.props.currentLanguage} and Passenger are installed.</p>
 				<h2>Did you already install {this.props.currentLanguage}?</h2>
 				<YesNoRadioButtons choice={this.state.languageInstalled} action={this.handleChange} />
 				{installLanguageContent}

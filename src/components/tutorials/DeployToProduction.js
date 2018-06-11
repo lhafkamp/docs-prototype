@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Markdown from 'react-markdown';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
@@ -23,13 +22,6 @@ class DeployToProduction extends Component {
 	}
 
 	render() {
-		// markdown variables
-		const header = `
-# Deploy to production`
-
-		const subTitle = `
-This is an end-to-end tutorial that teaches you how to install ${this.props.currentLanguage} and Passenger on a production server. This tutorial will ask you some questions, so the exact tutorial steps depend on the choices you make.`
-
 		// variable for different paths depending on the provider
 		let path;
 
@@ -54,9 +46,9 @@ This is an end-to-end tutorial that teaches you how to install ${this.props.curr
 
 		return (
 			<div id="deploy-to-production">
-				<Markdown source={header} />
+				<h1>Deploy to production</h1>
 				<CurrentSelection />
-				<Markdown source={subTitle} />
+				<p>This is an end-to-end tutorial that teaches you how to install {this.props.currentLanguage} and Passenger on a production server. This tutorial will ask you some questions, so the exact tutorial steps depend on the choices you make.</p>
 				<h2>Select your deployment method</h2>
 				<p>Please start by selecting the hosting provider or infrastructure that you want to deploy to.</p>
 				<RadioChoices subject="provider" />
