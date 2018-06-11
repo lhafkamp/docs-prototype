@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import queryString from 'query-string';
 
 import Dropdown from './Dropdown';
-import '../css/components/tutorial-nav.css';
+import '../css/components/left-nav-content.css';
 
 // render the normal nav
 function MainTutorialContent() {
@@ -116,7 +116,7 @@ class TutorialNav extends Component {
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
-			<div id="tutorial-nav">
+			<div id="left-nav-content">
 				<img className="version" src="/img/version.png" alt="gem version"/>
 				<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
 				<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />

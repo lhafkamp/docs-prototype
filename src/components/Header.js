@@ -10,7 +10,7 @@ class Header extends Component {
 					<ul>
 						<a href="https://phusionpassenger.com/"><img src="/img/passenger_logo.svg" alt="home" /></a>
 						<li><NavLink to='/tutorials/' activeClassName="selected">Tutorials</NavLink></li>
-						<li><NavLink to='/advanced/' activeClassName="selected">Advanced guides</NavLink></li>
+						<li><NavLink to='/advanced_guides/' activeClassName="selected">Advanced guides</NavLink></li>
 						<li><NavLink to='/references/' activeClassName="selected">References</NavLink></li>
 						<li><a href="https://www.phusionpassenger.com/library/">Old docs</a></li>
 					</ul>

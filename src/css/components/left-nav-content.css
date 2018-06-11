@@ -8,56 +8,56 @@
   }
 }
 
-#tutorial-nav span {
+#left-nav-content span {
   font-size: 12px;
   text-transform: uppercase;
   color: #818181;
 }
 
-#tutorial-nav ul {
+#left-nav-content ul {
   padding: 0;
   list-style: none;
 }
 
-#tutorial-nav ul li {
+#left-nav-content ul li {
   font-size: 14px;
   color: #35373B;
   line-height: 28px;
   cursor: pointer;
 }
 
-#tutorial-nav ul li:hover,
-#tutorial-nav ul li:focus {
+#left-nav-content ul li:hover,
+#left-nav-content ul li:focus {
   text-decoration: underline;
 }
 
-#tutorial-nav ul li a {
+#left-nav-content ul li a {
   text-decoration: none;
   color: #35373B;
   display: block;
   height: 100%;
 }
 
-#tutorial-nav .back-btn {
+#left-nav-content .back-btn {
   margin-top: 30px;
 }
 
-#tutorial-nav ul .back-btn a {
+#left-nav-content ul .back-btn a {
   display: inline;
   height: auto;
 }
 
-#tutorial-nav ul .back-btn:hover,
-#tutorial-nav ul .back-btn:focus {
+#left-nav-content ul .back-btn:hover,
+#left-nav-content ul .back-btn:focus {
   text-decoration: none;
 }
 
-#tutorial-nav .version {
+#left-nav-content .version {
   height: 17px;
   margin-bottom: 15px;
 }
 
-#tutorial-nav .selected {
+#left-nav-content .selected {
   font-weight: 500;
   color: #4EA0FF;
 }

@@ -15,10 +15,11 @@ import DeployInstallations from './tutorials/DeployInstallations';
 import DeployingYourApp from './tutorials/DeployingYourApp';
 import LaunchServer from './tutorials/LaunchServer';
 import DeployUpdates from './tutorials/DeployUpdates';
+import InstallAndUpgrade from './advanced_guides/InstallAndUpgrade';
 import PageNotFound from './PageNotFound';
 import '../css/components/main-content.css';
 
-const TutorialRoutes = () => (
+const MainRoutes = () => (
 	<Switch>
 		<Route exact path='/' render={() => (<Redirect to='/tutorials/what_is_passenger/' /> )} />
 		<Route exact path='/tutorials/' render={() => (<Redirect to='what_is_passenger/' /> )} />
@@ -36,6 +37,10 @@ const TutorialRoutes = () => (
 		<Route path='/tutorials/deploy_to_production/deploying_your_app/' component={DeployingYourApp} />
 		<Route path='/tutorials/deploy_to_production/deploy_updates/' component={DeployUpdates} />
 		<Route path='/tutorials/deploy_to_production/launch_server/' component={LaunchServer} />
+
+		<Route exact path='/advanced_guides/' render={() => (<Redirect to='/advanced_guides/install_and_upgrade/' /> )} />
+		<Route path='/advanced_guides/install_and_upgrade/' component={InstallAndUpgrade} />
+
 		<Route path='*' component={PageNotFound} />
 	</Switch>
 );
@@ -74,7 +79,7 @@ class MainContent extends Component {
 	render() {
 		return (
 			<div id="main-content">
-				<TutorialRoutes choices={this.props} />
+				<MainRoutes choices={this.props} />
 			</div>
 		);
 	}
