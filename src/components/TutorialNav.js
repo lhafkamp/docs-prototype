@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import queryString from 'query-string';
-
-import Dropdown from './Dropdown';
-import '../css/components/left-nav-content.css';
 
 // render the normal nav
 function MainTutorialContent() {
@@ -61,37 +57,7 @@ class TutorialNav extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			languages: ['Ruby', 'Python', 'Node', 'Meteor'],
-			integrations: ['Nginx', 'Apache', 'Standalone'],
-			navState: true,
-			parsed: queryString.parse(this.props.choices.location.search)
-		}
-	}
-
-	componentWillMount() {
-		if (this.props.choices.location.search !== '') {
-			const parsed = queryString.parse(this.props.choices.location.search);
-			const languages = ['Ruby', 'Python', 'Node', 'Meteor'];
-			const integrations = ['Nginx', 'Apache', 'Standalone'];
-
-			if (!languages.includes(parsed.language)) {
-				parsed.language = 'Ruby';
-			}
-
-			if (!integrations.includes(parsed.integration)) {
-				parsed.integration = 'Nginx';
-			}
-
-			// order the dropdown selections based on the URL
-			const parsedLanguages = [parsed.language, ...languages]
-			const parsedIntegrations = [parsed.integration, ...integrations]
-			const languageArr = [...new Set(parsedLanguages)]
-			const integrationArr = [...new Set(parsedIntegrations)]
-			
-			this.setState({
-				languages: languageArr,
-				integrations: integrationArr
-			});
+			navState: true
 		}
 	}
 
@@ -116,20 +82,15 @@ class TutorialNav extends Component {
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
-			<div id="left-nav-content">
-				<img className="version" src="/img/version.png" alt="gem version"/>
-				<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
-				<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />
-
+			<React.Fragment>
 				{mainTutorial}
-
 				<ul>
 					<span>Deployment</span>
 					<li><NavLink to={'/tutorials/deploy_to_production/'} activeClassName="selected">Deploy to production</NavLink></li>
 					{addDeployOptions}
 					{deployingUpdates}
 				</ul>
-			</div>
+			</React.Fragment>
 		);
 	}
 }
