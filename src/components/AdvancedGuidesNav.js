@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import queryString from 'query-string';
 
 class AdvancedGuidesNav extends Component {
 	render() {
 		return (
-			<ul>
+			<ul onClick={this.props.event}>
 				<span>Advanced guides</span>
 				<li><NavLink exact to={'/advanced_guides/install_and_upgrade/'} activeClassName="selected">(un)Install & upgrade</NavLink></li>
 				<li><NavLink exact to={'/advanced_guides/developing_with_passenger/'} activeClassName="selected">Developing with Passenger</NavLink></li>

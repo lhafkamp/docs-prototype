@@ -97,7 +97,6 @@
   line-height: 1.42857143;
   color: #faf6e4;
   background-color: #122b3b;
-  border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -214,6 +213,8 @@
 
 #main-content .video-player {
   margin-bottom: 10px;
+  position: relative;
+  z-index: -200;
 }
 
 #main-content .video-sub-text {
@@ -298,4 +299,25 @@
   max-width: 500px;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+@media(max-width: 700px) {
+  #main-content .video-player {
+    /* override react player inline styles */
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+@media(max-width: 940px) {
+  #main-content {
+    padding: 0 10px;
+    width: auto;
+  }
+}
+
+@media(max-width: 940px) {
+  #main-content {
+    margin-top: 40px;
+  }
 }

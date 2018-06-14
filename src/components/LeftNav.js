@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import TutorialNav from './TutorialNav';
 import AdvancedGuidesNav from './AdvancedGuidesNav';
 import Dropdown from './Dropdown';
+import MobileNavBtn from './MobileNavBtn';
 
 import '../css/components/left-nav.css';
 
@@ -13,8 +14,10 @@ class LeftNav extends Component {
 		this.state = {
 			languages: ['Ruby', 'Python', 'Node', 'Meteor'],
 			integrations: ['Nginx', 'Apache', 'Standalone'],
-			parsed: ''
+			parsed: '',
+			toggleHide: false
 		}
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	componentWillMount() {
@@ -45,22 +48,43 @@ class LeftNav extends Component {
 		}
 	}
 
+	componentDidMount() {
+		window.addEventListener('resize', this.resize.bind(this));
+	}
+
+	resize() {
+		this.setState({
+			toggleHide: window.innerWidth <= 940
+		});
+	}
+
+	handleClick() {
+		if (window.innerWidth <= 940) {
+			this.setState(prevState => ({
+				toggleHide: !prevState.toggleHide 
+			}));
+		}		
+	}
+
 	render() {
-		let navigation = <TutorialNav choices={this.props.choices} />
+		let navigation = <TutorialNav choices={this.props.choices} event={this.handleClick} />
 
 		if (this.props.choices.location.pathname.includes('/advanced_guides/')) {
-			navigation = <AdvancedGuidesNav choices={this.props.choices} />
+			navigation = <AdvancedGuidesNav choices={this.props.choices} event={this.handleClick} />
 		}
 
 		return (
-			<div id="left-nav">
-				<div id="left-nav-content">
-					<img className="version" src="/img/version.png" alt="gem version"/>
-					<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
-					<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />
-					{navigation}
+			<React.Fragment>
+				<div id="left-nav" style={{display: this.state.toggleHide ? 'none' : 'block'}}>
+					<div id="left-nav-content">
+						<img className="version" src="/img/version.png" alt="gem version"/>
+						<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
+						<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />
+						{navigation}
+					</div>
 				</div>
-			</div>
+				<MobileNavBtn event={this.handleClick} toggle={this.state.toggleHide} />
+			</React.Fragment>
 		);
 	}
 }

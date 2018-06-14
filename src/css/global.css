@@ -31,12 +31,6 @@ body {
   justify-content: center;
 }
 
-@media (max-width: 1260px) {
-  #content {
-    margin-left: 40px;
-  }
-}
-
 .light-button {
   font-size: 14px;
   font-weight: 900;
@@ -77,4 +71,10 @@ body {
 .dark-button:focus {
   color: #fff;
   background: #0076FF;
+}
+
+@media(max-width: 940px) {
+  #content {
+    display: block;
+  }
 }

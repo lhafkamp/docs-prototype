@@ -14,6 +14,7 @@ class Header extends Component {
 						<li><NavLink to='/references/' activeClassName="selected">References</NavLink></li>
 						<li><a href="https://www.phusionpassenger.com/library/">Old docs</a></li>
 					</ul>
+					<img className="small-screen-search" src="/img/search_icon.svg" alt="search docs.." />
 					<input type="search" placeholder="search docs.."/>
 				</div>
 			</div>

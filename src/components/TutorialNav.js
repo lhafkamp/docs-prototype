@@ -82,7 +82,7 @@ class TutorialNav extends Component {
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
-			<React.Fragment>
+			<div onClick={this.props.event}>
 				{mainTutorial}
 				<ul>
 					<span>Deployment</span>
@@ -90,7 +90,7 @@ class TutorialNav extends Component {
 					{addDeployOptions}
 					{deployingUpdates}
 				</ul>
-			</React.Fragment>
+			</div>
 		);
 	}
 }
