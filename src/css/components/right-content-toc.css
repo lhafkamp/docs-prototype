@@ -1,0 +1,31 @@
+#right-content-toc {
+  margin: 25px 0 25px 50px;
+  padding-left: 0;
+  top: 50px;
+  position: fixed;
+}
+
+#right-content-toc p {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#right-content-toc li {
+  margin-left: 40px;
+  margin-top: 3px;
+}
+
+#right-content-toc li {
+  margin-left: 40px;
+  margin-top: 3px;
+}
+
+#right-content a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #4EA0FF;
+}
+
+#right-content img {
+  margin-top: 20px;
+}

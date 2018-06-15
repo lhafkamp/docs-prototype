@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import LeftNav from './LeftNav.js';
-import MainContent from './MainContent';
+import MainContent from './MainNavigation';
 import RightContent from './RightContent';
 
 class Main extends Component {
@@ -14,7 +14,7 @@ class Main extends Component {
 				<div id="content">
 					<LeftNav choices={this.props} />
 					<MainContent choices={this.props} />
-					<RightContent />
+					<RightContent choices={this.props} />
 				</div>
 				<Footer />
 			</div>

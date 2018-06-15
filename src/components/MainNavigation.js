@@ -51,7 +51,7 @@ const MainRoutes = () => (
 	</Switch>
 );
 
-class MainContent extends Component {
+class MainNavigation extends Component {
 	componentWillMount() {
 		const parsed = queryString.parse(this.props.choices.location.search);
 		const languages = ['Ruby', 'Python', 'Node', 'Meteor'];
@@ -91,4 +91,4 @@ class MainContent extends Component {
 	}
 }
 
-export default MainContent;
+export default MainNavigation;
