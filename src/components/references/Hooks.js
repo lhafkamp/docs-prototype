@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import queryString from 'query-string';
 
 // import components
 import TableOfContents from '../TableOfContents';
@@ -9,6 +12,20 @@ import Body from './markdown/shared/SharedHooks';
 import '../../css/components/hooks.css';
 
 class Hooks extends Component {
+	componentWillMount() {
+		this.props.history.push({
+			pathname: this.props.location.pathname,
+			search: queryString.stringify({ 
+				integration: this.props.currentIntegration,
+				language: this.props.currentLanguage,
+			})
+		});
+	}
+
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		return (
 			<div id="hooks">
@@ -22,4 +39,11 @@ class Hooks extends Component {
 	}
 }
 
-export default Hooks;
+function mapStateToProps(state) {
+	return {
+		currentLanguage: state.currentLanguage,
+		currentIntegration: state.currentIntegration
+	}
+}
+
+export default connect(mapStateToProps)(Hooks)

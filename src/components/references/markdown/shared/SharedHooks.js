@@ -11,17 +11,17 @@ class SharedHooks extends Component {
 Apache
 : You can define hooks by setting the configuration option:
 
-      PassengerCtl hook_<HOOK NAME> <COMMAND TO EXECUTE>
+	PassengerCtl hook_<HOOK NAME> <COMMAND TO EXECUTE>
 
 Nginx
 : You can define hooks by setting the configuration option:
 
-      passenger_ctl hook_<HOOK NAME> <COMMAND TO EXECUTE>;
+    passenger_ctl hook_<HOOK NAME> <COMMAND TO EXECUTE>;
 
 Standalone
 : You can define hooks using [\`--ctl\` / "ctls"]("/config/standalone/reference/index.html"#--ctl-ctls):
 
-      --ctl hook_<HOOK NAME>=<COMMAND TO EXECUTE>
+    --ctl hook_<HOOK NAME>=<COMMAND TO EXECUTE>
 
 ## Example
 
