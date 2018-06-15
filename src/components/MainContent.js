@@ -16,6 +16,7 @@ import DeployingYourApp from './tutorials/DeployingYourApp';
 import LaunchServer from './tutorials/LaunchServer';
 import DeployUpdates from './tutorials/DeployUpdates';
 import InstallAndUpgrade from './advanced_guides/InstallAndUpgrade';
+import ConfigReference from './references/ConfigReference';
 import PageNotFound from './PageNotFound';
 import '../css/components/main-content.css';
 
@@ -40,6 +41,9 @@ const MainRoutes = () => (
 
 		<Route exact path='/advanced_guides/' render={() => (<Redirect to='/advanced_guides/install_and_upgrade/' /> )} />
 		<Route path='/advanced_guides/install_and_upgrade/' component={InstallAndUpgrade} />
+
+		<Route exact path='/references/' render={() => (<Redirect to='/references/config_reference/' /> )} />
+		<Route path='/references/config_reference/' component={ConfigReference} />
 
 		<Route path='*' component={PageNotFound} />
 	</Switch>

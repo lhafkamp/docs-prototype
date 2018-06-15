@@ -3,6 +3,7 @@ import queryString from 'query-string';
 
 import TutorialNav from './TutorialNav';
 import AdvancedGuidesNav from './AdvancedGuidesNav';
+import ReferencesNav from './ReferencesNav';
 import Dropdown from './Dropdown';
 import MobileNavBtn from './MobileNavBtn';
 
@@ -71,6 +72,10 @@ class LeftNav extends Component {
 
 		if (this.props.choices.location.pathname.includes('/advanced_guides/')) {
 			navigation = <AdvancedGuidesNav choices={this.props.choices} />
+		}
+
+		if (this.props.choices.location.pathname.includes('/references/')) {
+			navigation = <ReferencesNav choices={this.props.choices} />
 		}
 
 		return (
