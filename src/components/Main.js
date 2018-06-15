@@ -16,7 +16,7 @@ class Main extends Component {
 					<MainContent choices={this.props} />
 					<RightContent />
 				</div>
-				<Footer></Footer>
+				<Footer />
 			</div>
 		);
 	}

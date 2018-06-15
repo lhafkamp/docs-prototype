@@ -82,7 +82,7 @@ class TutorialNav extends Component {
 		const addDeployOptions = this.state.navState ? null : <DeployContent provider={this.props.choices.currentProviderChoice} />
 
 		return (
-			<div onClick={this.props.event}>
+			<div>
 				{mainTutorial}
 				<ul>
 					<span>Deployment</span>

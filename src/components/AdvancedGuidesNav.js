@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 class AdvancedGuidesNav extends Component {
 	render() {
 		return (
-			<ul onClick={this.props.event}>
+			<ul>
 				<span>Advanced guides</span>
 				<li><NavLink exact to={'/advanced_guides/install_and_upgrade/'} activeClassName="selected">(un)Install & upgrade</NavLink></li>
 				<li><NavLink exact to={'/advanced_guides/developing_with_passenger/'} activeClassName="selected">Developing with Passenger</NavLink></li>
