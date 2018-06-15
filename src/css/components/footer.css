@@ -1,12 +1,11 @@
 footer {
-  margin-top: 20px;
+  margin-top: 60px;
   padding: 40px 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 1px solid #EFEFEF;
+  border-top: 1px solid rgb(221, 227, 236);
   width: 100%;
-  text-align: center;
   color: #35373B;
   z-index: 20;
   background: #fff;
