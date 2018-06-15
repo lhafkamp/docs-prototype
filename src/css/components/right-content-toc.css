@@ -3,6 +3,9 @@
   padding-left: 0;
   top: 50px;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #right-content-toc p {
@@ -11,21 +14,27 @@
 }
 
 #right-content-toc li {
-  margin-left: 40px;
+  margin-left: 30px;
   margin-top: 3px;
+  line-height: 22px;
+  font-size: 14px;
 }
 
-#right-content-toc li {
-  margin-left: 40px;
-  margin-top: 3px;
-}
-
-#right-content a {
+#right-content-toc #table-of-contents a {
   font-weight: 500;
   text-decoration: none;
   color: #4EA0FF;
 }
 
-#right-content img {
-  margin-top: 20px;
+#right-content-toc img {
+  margin-top: 10px;
+}
+
+#right-content-toc .light-button {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+#right-content-toc .light-button:focus {
+  outline: none;
 }

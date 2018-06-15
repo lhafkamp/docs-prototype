@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 
-class NginxPerformanceTuning extends Component {
+class NginxSecurity extends Component {
 	render() {
 		return (
 			<Markdown escapeHtml={false} source={
 `
-<h2 id="performance-tuning">Performance tuning</h2>
+<h2 id="security">Security</h2>
 `
 			} />
 		)
 	}
 }
 
-export default NginxPerformanceTuning;
+export default NginxSecurity;

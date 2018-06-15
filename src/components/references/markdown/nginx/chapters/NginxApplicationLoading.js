@@ -6,7 +6,7 @@ class NginxApplicationLoading extends Component {
 		return (
 			<Markdown escapeHtml={false} source={
 `
-## Application loading
+<h2 id="application-loading">Application loading</h2>
 
 ### passenger_root
 

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import NginxApplicationLoading from './chapters/NginxApplicationLoading';
 import NginxPerformanceTuning from './chapters/NginxPerformanceTuning';
+import NginxSecurity from './chapters/NginxSecurity';
+import NginxRequest from './chapters/NginxRequest';
+import NginxLogging from './chapters/NginxLogging';
+import NginxDeprecated from './chapters/NginxDeprecated';
 
 class NginxConfigReference extends Component {
 	render() {
@@ -9,6 +13,10 @@ class NginxConfigReference extends Component {
 			<React.Fragment>
 				<NginxApplicationLoading />
 				<NginxPerformanceTuning />
+				<NginxSecurity />
+				<NginxRequest />
+				<NginxLogging />
+				<NginxDeprecated />
 			</React.Fragment>
 		)
 	}

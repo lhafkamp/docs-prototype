@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 
-class NginxPerformanceTuning extends Component {
+class NginxDeprecated extends Component {
 	render() {
 		return (
 			<Markdown escapeHtml={false} source={
 `
-<h2 id="performance-tuning">Performance tuning</h2>
+<h2 id="deprecated-or-removed-options">Deprecated or removed options</h2>
 `
 			} />
 		)
 	}
 }
 
-export default NginxPerformanceTuning;
+export default NginxDeprecated;
