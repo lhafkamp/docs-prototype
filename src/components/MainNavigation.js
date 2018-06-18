@@ -16,6 +16,7 @@ import DeployingYourApp from './tutorials/DeployingYourApp';
 import LaunchServer from './tutorials/LaunchServer';
 import DeployUpdates from './tutorials/DeployUpdates';
 import InstallAndUpgrade from './advanced_guides/InstallAndUpgrade';
+import InstallingPassenger from './advanced_guides/InstallingPassenger';
 import ConfigReference from './references/ConfigReference';
 import Hooks from './references/Hooks';
 import PageNotFound from './PageNotFound';
@@ -23,6 +24,7 @@ import '../css/components/main-content.css';
 
 const MainRoutes = () => (
 	<Switch>
+		{/* Tutorial routes */}
 		<Route exact path='/' render={() => (<Redirect to='/tutorials/what_is_passenger/' /> )} />
 		<Route exact path='/tutorials/' render={() => (<Redirect to='what_is_passenger/' /> )} />
 		<Route path='/tutorials/what_is_passenger/' component={WhatIsPassenger} />
@@ -39,14 +41,18 @@ const MainRoutes = () => (
 		<Route path='/tutorials/deploy_to_production/deploying_your_app/' component={DeployingYourApp} />
 		<Route path='/tutorials/deploy_to_production/deploy_updates/' component={DeployUpdates} />
 		<Route path='/tutorials/deploy_to_production/launch_server/' component={LaunchServer} />
-
+		
+		{/* Advanced Guides routes */}
 		<Route exact path='/advanced_guides/' render={() => (<Redirect to='/advanced_guides/install_and_upgrade/' /> )} />
-		<Route path='/advanced_guides/install_and_upgrade/' component={InstallAndUpgrade} />
+		<Route exact path='/advanced_guides/install_and_upgrade/' component={InstallAndUpgrade} />
+		<Route path='/advanced_guides/install_and_upgrade/installing_passenger/' component={InstallingPassenger} />
 
+		{/* References routes */}
 		<Route exact path='/references/' render={() => (<Redirect to='/references/config_reference/' /> )} />
 		<Route path='/references/config_reference/' component={ConfigReference} />
 		<Route path='/references/hooks/' component={Hooks} />
 
+		{/* Misc routes */}
 		<Route path='*' component={PageNotFound} />
 	</Switch>
 );

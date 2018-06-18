@@ -190,6 +190,13 @@
   background-position: -6px -1px;
 }
 
+#main-content .info .heroku {
+  width: 75px;
+  padding: 0px 2px 0px 2px;
+  margin-top: 0px;
+  margin-bottom: -6px;
+}
+
 #main-content .note {
   background: #fffbdd;
   padding: 20px 20px 20px;
