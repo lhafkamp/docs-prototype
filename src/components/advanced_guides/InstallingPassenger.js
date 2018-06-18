@@ -30,10 +30,10 @@ class InstallingPassenger extends Component {
 	render() {
 		return (
 			<div>
-				{ /* TODO automate BreadCrumb instead of inserting every name/url */}
-				<BreadCrumb previous={'(un)Install & upgrade'} 
-										current={'Installing Passenger'} 
-										mainUrl={'/advanced_guides/install_and_upgrade/'} />
+				{ /* TODO automate BreadCrumb instead of inserting every name */}
+				<BreadCrumb previousPath={'(un)Install & upgrade'} 
+										currentPath={'Installing Passenger'} 
+										mainUrl={this.props.location.pathname} />
 				<h1>Installing Passenger</h1>
 				<CurrentSelection />
 				<TableOfContents />
