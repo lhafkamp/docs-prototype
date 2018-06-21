@@ -1,6 +1,6 @@
 server "passenger_library@staging.phusionpassenger.com", :roles => [:app, :web, :db]
 # set :application, 'passenger_website'
-# set :branch, 'staging'
+# set :branch, 'device-lab'
 
 
 # server-based syntax
