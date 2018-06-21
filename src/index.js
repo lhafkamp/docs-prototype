@@ -12,7 +12,7 @@ import './css/global.css';
 
 const router = (
 	<Provider store={store}>
-		<Router basename="/docs/">
+		<Router>
 			<Route exact path="*" component={App}></Route>
 		</Router>
 	</Provider>
