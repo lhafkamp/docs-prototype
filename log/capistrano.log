@@ -1,0 +1,143 @@
+# Logfile created on 2018-06-21 14:57:58 +0200 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 14:57:58 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [010d170b] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [010d170b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [010d170b] Finished in 6.313 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [12f77d98] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [12f77d98] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [12f77d98] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [f1ee0448] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [f1ee0448] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [f1ee0448] 	Permission denied (publickey).
+ DEBUG [f1ee0448] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 14:59:03 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8a1e309e] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [8a1e309e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8a1e309e] Finished in 0.418 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [3fc33007] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [3fc33007] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [3fc33007] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [b13a80b7] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [b13a80b7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [b13a80b7] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [b13a80b7] Finished in 2.511 seconds with exit status 0 (successful).
+  INFO [64113a9c] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [64113a9c] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [64113a9c] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [0d82f4fd] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [0d82f4fd] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [0d82f4fd] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [a2838f84] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [a2838f84] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [a2838f84] 	d793725791a159297a10a04690a4b5886507645a
+ DEBUG [a2838f84] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [817246da] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [817246da] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [817246da] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [38159dcc] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [38159dcc] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [38159dcc] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [3c258ab5] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [3c258ab5] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [3c258ab5] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [dedcaefc] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [dedcaefc] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [dedcaefc] 	Fetching origin
+ DEBUG [dedcaefc] 	From github.com:lhafkamp/docs-prototype
+   d793725..2385e3d  master     -> master
+  INFO [dedcaefc] Finished in 1.695 seconds with exit status 0 (successful).
+ DEBUG [e750a8b1] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [e750a8b1] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [e750a8b1] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [d4179ec1] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621125906 as passenger_library@staging.phusionpassenger.com
+ DEBUG [d4179ec1] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621125906 )
+  INFO [d4179ec1] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [0cff2be1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621125906 as passenger_library@staging.phusionpassenger.com
+ DEBUG [0cff2be1] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621125906 )
+  INFO [0cff2be1] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [227c49e9] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [227c49e9] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [227c49e9] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [b75744b5] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [b75744b5] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b75744b5] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [b75744b5] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [93fe8575] Running if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [93fe8575] Command: if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi
+ DEBUG [93fe8575] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [85684ec7] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [85684ec7] Command: cd /var/www/passenger_documentation/releases/20180621125906 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [85684ec7] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [9722059e] Running if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [9722059e] Command: if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi
+ DEBUG [9722059e] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [f87ea07a] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [f87ea07a] Command: cd /var/www/passenger_documentation/releases/20180621125906 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [f87ea07a] 	added 2044 packages from 1388 contributors and audited 20126 packages in 30.79s
+ DEBUG [f87ea07a] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [f87ea07a] Finished in 31.416 seconds with exit status 0 (successful).
+ DEBUG [7ffba260] Running if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [7ffba260] Command: if test ! -d /var/www/passenger_documentation/releases/20180621125906; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621125906'" 1>&2; false; fi
+ DEBUG [7ffba260] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [b272a39c] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [b272a39c] Command: cd /var/www/passenger_documentation/releases/20180621125906 && /usr/bin/env npm run build
+ DEBUG [b272a39c] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180621125906
+> react-scripts build
+
+ DEBUG [b272a39c] 	Creating an optimized production build...
+ DEBUG [b272a39c] 	Compiled successfully.
+
+ DEBUG [b272a39c] 	File sizes after gzip:
+
+ DEBUG [b272a39c] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [b272a39c] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [b272a39c] 	
+ DEBUG [b272a39c] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [b272a39c] 	You can control this with the homepage field in your package.json.
+ DEBUG [b272a39c] 	
+ DEBUG [b272a39c] 	The build folder is ready to be deployed.
+ DEBUG [b272a39c] 	
+ DEBUG [b272a39c] 	Find out more about deployment here:
+ DEBUG [b272a39c] 	
+ DEBUG [b272a39c] 	  http://bit.ly/2vY88Kr
+ DEBUG [b272a39c] 	
+  INFO [b272a39c] Finished in 24.472 seconds with exit status 0 (successful).
+  INFO [f56abb7c] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621125906 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [f56abb7c] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621125906 /var/www/passenger_documentation/releases/current
+  INFO [f56abb7c] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [114539c8] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [114539c8] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [114539c8] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [25579938] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [25579938] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [25579938] 	20180621121839	20180621122551	20180621122815	20180621123011	20180621125906
+ DEBUG [25579938] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on staging.phusionpassenger.com
+ DEBUG [eceb4679] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [eceb4679] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [eceb4679] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [8bd97f09] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [8bd97f09] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [8bd97f09] 	/var/www/passenger_documentation/releases/20180621125906
+ DEBUG [8bd97f09] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO No old releases (keeping newest 5) on staging.phusionpassenger.com
+ DEBUG [caf26afe] Running if test ! -d /var/www/passenger_documentation/releases; then echo "Directory does not exist '/var/www/passenger_documentation/releases'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [caf26afe] Command: if test ! -d /var/www/passenger_documentation/releases; then echo "Directory does not exist '/var/www/passenger_documentation/releases'" 1>&2; false; fi
+ DEBUG [caf26afe] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [937e0d02] Running /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180621125906 by luuk" >> /var/www/passenger_documentation/revisions.log as passenger_library@staging.phusionpassenger.com
+ DEBUG [937e0d02] Command: cd /var/www/passenger_documentation/releases && /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180621125906 by luuk" >> /var/www/passenger_documentation/revisions.log
+  INFO [937e0d02] Finished in 0.080 seconds with exit status 0 (successful).
