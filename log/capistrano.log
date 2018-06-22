@@ -576,3 +576,1223 @@ and the repository exists.
   INFO [d944c589] Running /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180621151324 by luuk" >> /var/www/passenger_documentation/revisions.log as passenger_library@staging.phusionpassenger.com
  DEBUG [d944c589] Command: cd /var/www/passenger_documentation/releases && /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180621151324 by luuk" >> /var/www/passenger_documentation/revisions.log
   INFO [d944c589] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 17:19:42 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [52430c72] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [52430c72] Command: /usr/bin/env mkdir -p /tmp
+  INFO [52430c72] Finished in 0.387 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [fd66548a] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [fd66548a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [fd66548a] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [e3d28c62] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [e3d28c62] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [e3d28c62] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [e3d28c62] Finished in 1.362 seconds with exit status 0 (successful).
+  INFO [19ca418b] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [19ca418b] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [19ca418b] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [52ea27e9] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [52ea27e9] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [52ea27e9] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [181bac01] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [181bac01] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [181bac01] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [181bac01] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [4c86634f] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [4c86634f] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [4c86634f] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [a46a8c98] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [a46a8c98] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [a46a8c98] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [9a8c8db8] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [9a8c8db8] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [9a8c8db8] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [82ba29c9] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [82ba29c9] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [82ba29c9] 	Fetching origin
+ DEBUG [82ba29c9] 	From github.com:lhafkamp/docs-prototype
+   092a033..30abdc7  device-lab -> device-lab
+  INFO [82ba29c9] Finished in 1.390 seconds with exit status 0 (successful).
+ DEBUG [8e2d5ae7] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [8e2d5ae7] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [8e2d5ae7] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [68ed85fb] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621151945 as passenger_library@staging.phusionpassenger.com
+ DEBUG [68ed85fb] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621151945 )
+  INFO [68ed85fb] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [a0083e4f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621151945 as passenger_library@staging.phusionpassenger.com
+ DEBUG [a0083e4f] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621151945 )
+  INFO [a0083e4f] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [611d9d47] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [611d9d47] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [611d9d47] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [d46573b8] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [d46573b8] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d46573b8] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [d46573b8] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [4598205f] Running if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [4598205f] Command: if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi
+ DEBUG [4598205f] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [a8da21c8] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [a8da21c8] Command: cd /var/www/passenger_documentation/releases/20180621151945 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [a8da21c8] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [391ec6eb] Running if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [391ec6eb] Command: if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi
+ DEBUG [391ec6eb] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [c820c528] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [c820c528] Command: cd /var/www/passenger_documentation/releases/20180621151945 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [c820c528] 	added 2044 packages from 1388 contributors and audited 20126 packages in 30.707s
+ DEBUG [c820c528] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [c820c528] Finished in 31.428 seconds with exit status 0 (successful).
+ DEBUG [96fc99ea] Running if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [96fc99ea] Command: if test ! -d /var/www/passenger_documentation/releases/20180621151945; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621151945'" 1>&2; false; fi
+ DEBUG [96fc99ea] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [025ad32f] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [025ad32f] Command: cd /var/www/passenger_documentation/releases/20180621151945 && /usr/bin/env npm run build
+ DEBUG [025ad32f] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180621151945
+> react-scripts build
+
+ DEBUG [025ad32f] 	Creating an optimized production build...
+ DEBUG [025ad32f] 	Compiled successfully.
+
+ DEBUG [025ad32f] 	File sizes after gzip:
+
+ DEBUG [025ad32f] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [025ad32f] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [025ad32f] 	
+ DEBUG [025ad32f] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [025ad32f] 	You can control this with the homepage field in your package.json.
+ DEBUG [025ad32f] 	
+ DEBUG [025ad32f] 	The build folder is ready to be deployed.
+ DEBUG [025ad32f] 	
+ DEBUG [025ad32f] 	Find out more about deployment here:
+ DEBUG [025ad32f] 	
+ DEBUG [025ad32f] 	  http://bit.ly/2vY88Kr
+ DEBUG [025ad32f] 	
+  INFO [025ad32f] Finished in 22.845 seconds with exit status 0 (successful).
+  INFO [bbd7dcfd] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621151945 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [bbd7dcfd] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621151945 /var/www/passenger_documentation/releases/current
+  INFO [bbd7dcfd] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [c0db7fb3] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [c0db7fb3] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [c0db7fb3] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [8b1cc443] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [8b1cc443] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [8b1cc443] 	20180621123011	20180621125906	20180621145227	20180621150827	20180621151324
+20180621151945
+ DEBUG [8b1cc443] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on staging.phusionpassenger.com
+ DEBUG [db7b8d87] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [db7b8d87] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [db7b8d87] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [aca30bb9] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [aca30bb9] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [aca30bb9] 	/var/www/passenger_documentation/releases/20180621151945
+ DEBUG [aca30bb9] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [892b3b1d] Running /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 as passenger_library@staging.phusionpassenger.com
+ DEBUG [892b3b1d] Command: /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css.map'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js.map'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/FP_logo.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/search_icon.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ocean.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_node_architecture.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/multiple_placeholder.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/feedback_placeholder.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/meteor.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_final.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_create_droplet.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_creating.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_image.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_size.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_ip.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/passenger.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/github.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/twitter.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/version.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ruby.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/warning.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_logo.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/traditional_nodejs.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/python.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/info.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/aws2.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/note.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/apache.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/nginx.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fuse_panel.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/cloud66.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/node.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fundamentals.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/menulines.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/heroku.svg'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+ DEBUG [892b3b1d] 	rm: 
+ DEBUG [892b3b1d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/app_server_concept.png'
+ DEBUG [892b3b1d] 	: Permission denied
+ DEBUG [892b3b1d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 17:21:34 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [570a78fd] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [570a78fd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [570a78fd] Finished in 0.469 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [e175cd64] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [e175cd64] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [e175cd64] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [7a4df936] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [7a4df936] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [7a4df936] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [7a4df936] Finished in 1.463 seconds with exit status 0 (successful).
+  INFO [501fcacf] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [501fcacf] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [501fcacf] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [d72f0323] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [d72f0323] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [d72f0323] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [67f52f7c] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [67f52f7c] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [67f52f7c] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [67f52f7c] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [0374d60b] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [0374d60b] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [0374d60b] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [48632cfc] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [48632cfc] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [48632cfc] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [81084ea4] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [81084ea4] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [81084ea4] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [f94173d0] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [f94173d0] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f94173d0] 	Fetching origin
+  INFO [f94173d0] Finished in 1.458 seconds with exit status 0 (successful).
+ DEBUG [727ec783] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [727ec783] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [727ec783] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [976cb138] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621152136 as passenger_library@staging.phusionpassenger.com
+ DEBUG [976cb138] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621152136 )
+  INFO [976cb138] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [a2c2d193] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621152136 as passenger_library@staging.phusionpassenger.com
+ DEBUG [a2c2d193] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621152136 )
+  INFO [a2c2d193] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [98c342c6] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [98c342c6] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [98c342c6] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [f28dc9e7] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [f28dc9e7] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f28dc9e7] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [f28dc9e7] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [10461eef] Running if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [10461eef] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi
+ DEBUG [10461eef] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [a216d83c] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [a216d83c] Command: cd /var/www/passenger_documentation/releases/20180621152136 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [a216d83c] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [46e11261] Running if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [46e11261] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi
+ DEBUG [46e11261] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [3255428f] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [3255428f] Command: cd /var/www/passenger_documentation/releases/20180621152136 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [3255428f] 	added 2044 packages from 1388 contributors and audited 20126 packages in 30.777s
+ DEBUG [3255428f] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [3255428f] Finished in 31.462 seconds with exit status 0 (successful).
+ DEBUG [864077e2] Running if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [864077e2] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152136; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152136'" 1>&2; false; fi
+ DEBUG [864077e2] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [a985204f] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [a985204f] Command: cd /var/www/passenger_documentation/releases/20180621152136 && /usr/bin/env npm run build
+ DEBUG [a985204f] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180621152136
+> react-scripts build
+
+ DEBUG [a985204f] 	Creating an optimized production build...
+ DEBUG [a985204f] 	Compiled successfully.
+
+ DEBUG [a985204f] 	File sizes after gzip:
+
+ DEBUG [a985204f] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [a985204f] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [a985204f] 	
+ DEBUG [a985204f] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [a985204f] 	You can control this with the homepage field in your package.json.
+ DEBUG [a985204f] 	
+ DEBUG [a985204f] 	The build folder is ready to be deployed.
+ DEBUG [a985204f] 	
+ DEBUG [a985204f] 	Find out more about deployment here:
+ DEBUG [a985204f] 	
+ DEBUG [a985204f] 	  http://bit.ly/2vY88Kr
+ DEBUG [a985204f] 	
+  INFO [a985204f] Finished in 23.345 seconds with exit status 0 (successful).
+  INFO [884c9d88] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621152136 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [884c9d88] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621152136 /var/www/passenger_documentation/releases/current
+  INFO [884c9d88] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [ebca13f4] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [ebca13f4] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [ebca13f4] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [e234e69a] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [e234e69a] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [e234e69a] 	20180621123011	20180621125906	20180621145227	20180621150827	20180621151324
+20180621151945	20180621152136
+ DEBUG [e234e69a] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on staging.phusionpassenger.com
+ DEBUG [6ef092c8] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [6ef092c8] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [6ef092c8] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [61982b16] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [61982b16] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [61982b16] 	/var/www/passenger_documentation/releases/20180621152136
+ DEBUG [61982b16] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [b2245a62] Running /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621125906 as passenger_library@staging.phusionpassenger.com
+ DEBUG [b2245a62] Command: /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621125906
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css.map'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js.map'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/FP_logo.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/search_icon.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ocean.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_node_architecture.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/multiple_placeholder.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/feedback_placeholder.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/meteor.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_final.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_create_droplet.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_creating.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_image.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_size.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_ip.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/passenger.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/github.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/twitter.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/version.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ruby.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/warning.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_logo.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/traditional_nodejs.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/python.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/info.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/aws2.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/note.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/apache.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/nginx.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fuse_panel.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/cloud66.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/node.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fundamentals.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/menulines.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/heroku.svg'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+ DEBUG [b2245a62] 	rm: 
+ DEBUG [b2245a62] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/app_server_concept.png'
+ DEBUG [b2245a62] 	: Permission denied
+ DEBUG [b2245a62] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 17:23:45 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c76dac41] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [c76dac41] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c76dac41] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [8a95076b] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [8a95076b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [8a95076b] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [876a532c] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [876a532c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [876a532c] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [876a532c] Finished in 1.319 seconds with exit status 0 (successful).
+  INFO [617a1f7b] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [617a1f7b] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [617a1f7b] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [c00471e7] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [c00471e7] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [c00471e7] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [1718072d] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [1718072d] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [1718072d] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [1718072d] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [39f11b41] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [39f11b41] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [39f11b41] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [5223f79d] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [5223f79d] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [5223f79d] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [a56e036e] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [a56e036e] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [a56e036e] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [89cbf1df] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [89cbf1df] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [89cbf1df] 	Fetching origin
+  INFO [89cbf1df] Finished in 1.312 seconds with exit status 0 (successful).
+ DEBUG [f33af393] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [f33af393] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [f33af393] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [552709a1] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621152347 as passenger_library@staging.phusionpassenger.com
+ DEBUG [552709a1] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621152347 )
+  INFO [552709a1] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [78471cc5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621152347 as passenger_library@staging.phusionpassenger.com
+ DEBUG [78471cc5] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621152347 )
+  INFO [78471cc5] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [f7c61879] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [f7c61879] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [f7c61879] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [d2de8aaf] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [d2de8aaf] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d2de8aaf] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [d2de8aaf] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [9493396c] Running if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [9493396c] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi
+ DEBUG [9493396c] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [8756275f] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [8756275f] Command: cd /var/www/passenger_documentation/releases/20180621152347 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [8756275f] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [14826aff] Running if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [14826aff] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi
+ DEBUG [14826aff] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [cf5a15a7] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [cf5a15a7] Command: cd /var/www/passenger_documentation/releases/20180621152347 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [cf5a15a7] 	added 2044 packages from 1388 contributors and audited 20126 packages in 30.63s
+ DEBUG [cf5a15a7] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [cf5a15a7] Finished in 31.306 seconds with exit status 0 (successful).
+ DEBUG [b92c0b49] Running if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [b92c0b49] Command: if test ! -d /var/www/passenger_documentation/releases/20180621152347; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621152347'" 1>&2; false; fi
+ DEBUG [b92c0b49] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [89f7d3d4] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [89f7d3d4] Command: cd /var/www/passenger_documentation/releases/20180621152347 && /usr/bin/env npm run build
+ DEBUG [89f7d3d4] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180621152347
+> react-scripts build
+
+ DEBUG [89f7d3d4] 	Creating an optimized production build...
+ DEBUG [89f7d3d4] 	Compiled successfully.
+
+ DEBUG [89f7d3d4] 	File sizes after gzip:
+
+ DEBUG [89f7d3d4] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [89f7d3d4] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [89f7d3d4] 	
+ DEBUG [89f7d3d4] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [89f7d3d4] 	You can control this with the homepage field in your package.json.
+ DEBUG [89f7d3d4] 	
+ DEBUG [89f7d3d4] 	The build folder is ready to be deployed.
+ DEBUG [89f7d3d4] 	
+ DEBUG [89f7d3d4] 	Find out more about deployment here:
+ DEBUG [89f7d3d4] 	
+ DEBUG [89f7d3d4] 	  http://bit.ly/2vY88Kr
+ DEBUG [89f7d3d4] 	
+  INFO [89f7d3d4] Finished in 23.563 seconds with exit status 0 (successful).
+  INFO [c78f30ac] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621152347 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [c78f30ac] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621152347 /var/www/passenger_documentation/releases/current
+  INFO [c78f30ac] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [cefe7acb] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [cefe7acb] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [cefe7acb] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [a2169baf] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [a2169baf] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [a2169baf] 	20180621123011	20180621145227	20180621150827	20180621151324	20180621151945
+20180621152136	20180621152347
+ DEBUG [a2169baf] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on staging.phusionpassenger.com
+ DEBUG [b297318b] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [b297318b] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [b297318b] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [e63a3904] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [e63a3904] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [e63a3904] 	/var/www/passenger_documentation/releases/20180621152347
+ DEBUG [e63a3904] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [69c17d82] Running /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621145227 as passenger_library@staging.phusionpassenger.com
+ DEBUG [69c17d82] Command: /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621145227
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css.map'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js.map'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/FP_logo.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/search_icon.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ocean.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_node_architecture.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/multiple_placeholder.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/feedback_placeholder.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/meteor.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_final.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_create_droplet.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_creating.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_image.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_size.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_ip.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/passenger.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/github.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/twitter.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/version.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ruby.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/warning.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_logo.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/traditional_nodejs.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/python.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/info.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/aws2.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/note.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/apache.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/nginx.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fuse_panel.png'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/cloud66.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/node.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fundamentals.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/menulines.svg'
+ DEBUG [69c17d82] 	: Permission denied
+ DEBUG [69c17d82] 	
+ DEBUG [69c17d82] 	rm: 
+ DEBUG [69c17d82] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/heroku.svg': Permission denied
+rm: cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/app_server_concept.png': Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-21 17:32:23 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fd1f5e56] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [fd1f5e56] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fd1f5e56] Finished in 0.430 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [6e548841] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [6e548841] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [6e548841] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [01a4c5b1] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [01a4c5b1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [01a4c5b1] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [01a4c5b1] Finished in 1.358 seconds with exit status 0 (successful).
+  INFO [503ed9a8] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [503ed9a8] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [503ed9a8] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [0455323d] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [0455323d] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [0455323d] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [f9c00dc3] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [f9c00dc3] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [f9c00dc3] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [f9c00dc3] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [9d33b3d6] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [9d33b3d6] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [9d33b3d6] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [aa542281] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [aa542281] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [aa542281] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [a1bd1809] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [a1bd1809] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [a1bd1809] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [198368bb] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [198368bb] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [198368bb] 	Fetching origin
+  INFO [198368bb] Finished in 1.392 seconds with exit status 0 (successful).
+ DEBUG [9fde5c3e] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [9fde5c3e] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [9fde5c3e] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [8fbe40b3] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621153226 as passenger_library@staging.phusionpassenger.com
+ DEBUG [8fbe40b3] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180621153226 )
+  INFO [8fbe40b3] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [45c3476e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621153226 as passenger_library@staging.phusionpassenger.com
+ DEBUG [45c3476e] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180621153226 )
+  INFO [45c3476e] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [243834fe] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [243834fe] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [243834fe] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [a22383bf] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [a22383bf] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a22383bf] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [a22383bf] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [fa1e7a2e] Running if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [fa1e7a2e] Command: if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi
+ DEBUG [fa1e7a2e] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [f1f461fa] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [f1f461fa] Command: cd /var/www/passenger_documentation/releases/20180621153226 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [f1f461fa] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [68f09bd3] Running if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [68f09bd3] Command: if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi
+ DEBUG [68f09bd3] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [8cfe21c4] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [8cfe21c4] Command: cd /var/www/passenger_documentation/releases/20180621153226 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [8cfe21c4] 	added 2044 packages from 1388 contributors and audited 20126 packages in 30.455s
+ DEBUG [8cfe21c4] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [8cfe21c4] Finished in 31.112 seconds with exit status 0 (successful).
+ DEBUG [022f3120] Running if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [022f3120] Command: if test ! -d /var/www/passenger_documentation/releases/20180621153226; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180621153226'" 1>&2; false; fi
+ DEBUG [022f3120] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [e8c36577] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [e8c36577] Command: cd /var/www/passenger_documentation/releases/20180621153226 && /usr/bin/env npm run build
+ DEBUG [e8c36577] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180621153226
+> react-scripts build
+
+ DEBUG [e8c36577] 	Creating an optimized production build...
+ DEBUG [e8c36577] 	Compiled successfully.
+
+ DEBUG [e8c36577] 	File sizes after gzip:
+
+ DEBUG [e8c36577] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [e8c36577] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [e8c36577] 	
+ DEBUG [e8c36577] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [e8c36577] 	You can control this with the homepage field in your package.json.
+ DEBUG [e8c36577] 	
+ DEBUG [e8c36577] 	The build folder is ready to be deployed.
+ DEBUG [e8c36577] 	
+ DEBUG [e8c36577] 	Find out more about deployment here:
+ DEBUG [e8c36577] 	
+ DEBUG [e8c36577] 	  http://bit.ly/2vY88Kr
+ DEBUG [e8c36577] 	
+  INFO [e8c36577] Finished in 22.545 seconds with exit status 0 (successful).
+  INFO [7d7e8db0] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621153226 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [7d7e8db0] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180621153226 /var/www/passenger_documentation/releases/current
+  INFO [7d7e8db0] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [7dc425b1] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [7dc425b1] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [7dc425b1] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [046f80fa] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [046f80fa] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [046f80fa] 	20180621123011	20180621150827	20180621151324	20180621151945	20180621152136
+20180621152347	20180621153226
+ DEBUG [046f80fa] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on staging.phusionpassenger.com
+ DEBUG [92749aca] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [92749aca] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [92749aca] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [43f32e44] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [43f32e44] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [43f32e44] 	/var/www/passenger_documentation/releases/20180621153226
+ DEBUG [43f32e44] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [d888aa6d] Running /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621150827 as passenger_library@staging.phusionpassenger.com
+ DEBUG [d888aa6d] Command: /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621123011 /var/www/passenger_documentation/releases/20180621150827
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css.map'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/css/main.b0115370.css'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/static/js/main.ad61a1c9.js.map'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/FP_logo.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/search_icon.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ocean.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_node_architecture.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/multiple_placeholder.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/feedback_placeholder.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/meteor.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_final.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_create_droplet.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_creating.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_image.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_size.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/digitalocean/digital_ocean_ip.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/passenger.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/github.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/footer/twitter.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/version.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/ruby.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/warning.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/passenger_logo.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/traditional_nodejs.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/python.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/info.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/aws2.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/note.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/apache.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/nginx.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fuse_panel.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/cloud66.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/node.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/fundamentals.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/menulines.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/heroku.svg'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+ DEBUG [d888aa6d] 	rm: 
+ DEBUG [d888aa6d] 	cannot remove '/var/www/passenger_documentation/releases/20180621123011/build/img/app_server_concept.png'
+ DEBUG [d888aa6d] 	: Permission denied
+ DEBUG [d888aa6d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-22 10:04:18 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0dcf53d8] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [0dcf53d8] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0dcf53d8] Finished in 3.521 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [074f7b62] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [074f7b62] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [074f7b62] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [b290cdc0] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [b290cdc0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [b290cdc0] 	Permission denied (publickey).
+ DEBUG [b290cdc0] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-22 10:05:48 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [288a22b8] Running /usr/bin/env mkdir -p /tmp as passenger_library@staging.phusionpassenger.com
+ DEBUG [288a22b8] Command: /usr/bin/env mkdir -p /tmp
+  INFO [288a22b8] Finished in 0.354 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 0.0%
+  INFO Uploading /tmp/git-ssh-passenger_documentation-staging-luuk.sh 100.0%
+  INFO [414b205d] Running /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh as passenger_library@staging.phusionpassenger.com
+ DEBUG [414b205d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-passenger_documentation-staging-luuk.sh
+  INFO [414b205d] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [d5804f0c] Running /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD as passenger_library@staging.phusionpassenger.com
+ DEBUG [d5804f0c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git ls-remote git@github.com:lhafkamp/docs-prototype.git HEAD )
+ DEBUG [d5804f0c] 	2385e3df2ced5c138f54ea90451e8c9913702f2f	HEAD
+  INFO [d5804f0c] Finished in 1.300 seconds with exit status 0 (successful).
+  INFO [fe209309] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [fe209309] Command: /usr/bin/env mkdir -p /var/www/passenger_documentation/shared /var/www/passenger_documentation/releases
+  INFO [fe209309] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [2c78daa1] Running [ -f /var/www/passenger_documentation/current/REVISION ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [2c78daa1] Command: [ -f /var/www/passenger_documentation/current/REVISION ]
+ DEBUG [2c78daa1] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [8a3d2f4c] Running /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null as passenger_library@staging.phusionpassenger.com
+ DEBUG [8a3d2f4c] Command: /usr/bin/env cat /var/www/passenger_documentation/current/REVISION 2>/dev/null
+ DEBUG [8a3d2f4c] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [8a3d2f4c] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [0ae72673] Running [ -f /var/www/passenger_documentation/repo/HEAD ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [0ae72673] Command: [ -f /var/www/passenger_documentation/repo/HEAD ]
+ DEBUG [0ae72673] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/passenger_documentation/repo
+ DEBUG [0a8bbcc1] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [0a8bbcc1] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [0a8bbcc1] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [1bb67ff2] Running /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git as passenger_library@staging.phusionpassenger.com
+ DEBUG [1bb67ff2] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote set-url origin git@github.com:lhafkamp/docs-prototype.git )
+  INFO [1bb67ff2] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [d6914ace] Running /usr/bin/env git remote update --prune as passenger_library@staging.phusionpassenger.com
+ DEBUG [d6914ace] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d6914ace] 	Fetching origin
+  INFO [d6914ace] Finished in 1.279 seconds with exit status 0 (successful).
+ DEBUG [4ec04817] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [4ec04817] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [4ec04817] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [7cdd4aaf] Running /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180622080550 as passenger_library@staging.phusionpassenger.com
+ DEBUG [7cdd4aaf] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env mkdir -p /var/www/passenger_documentation/releases/20180622080550 )
+  INFO [7cdd4aaf] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [f9abd543] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180622080550 as passenger_library@staging.phusionpassenger.com
+ DEBUG [f9abd543] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/passenger_documentation/releases/20180622080550 )
+  INFO [f9abd543] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [d42fa8ff] Running if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [d42fa8ff] Command: if test ! -d /var/www/passenger_documentation/repo; then echo "Directory does not exist '/var/www/passenger_documentation/repo'" 1>&2; false; fi
+ DEBUG [d42fa8ff] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [4120736e] Running /usr/bin/env git rev-list --max-count=1 master as passenger_library@staging.phusionpassenger.com
+ DEBUG [4120736e] Command: cd /var/www/passenger_documentation/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-passenger_documentation-staging-luuk.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4120736e] 	2385e3df2ced5c138f54ea90451e8c9913702f2f
+ DEBUG [4120736e] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [cea0c868] Running if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [cea0c868] Command: if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi
+ DEBUG [cea0c868] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [82a7a486] Running /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION as passenger_library@staging.phusionpassenger.com
+ DEBUG [82a7a486] Command: cd /var/www/passenger_documentation/releases/20180622080550 && /usr/bin/env echo "2385e3df2ced5c138f54ea90451e8c9913702f2f" > REVISION
+  INFO [82a7a486] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [d9782117] Running if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [d9782117] Command: if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi
+ DEBUG [d9782117] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [af6411df] Running /usr/bin/env npm install --production --silent --no-progress as passenger_library@staging.phusionpassenger.com
+ DEBUG [af6411df] Command: cd /var/www/passenger_documentation/releases/20180622080550 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [af6411df] 	added 2044 packages from 1388 contributors and audited 20126 packages in 31.967s
+ DEBUG [af6411df] 	found 84 vulnerabilities (40 low, 35 moderate, 8 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+  INFO [af6411df] Finished in 32.749 seconds with exit status 0 (successful).
+ DEBUG [eca8b0c1] Running if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [eca8b0c1] Command: if test ! -d /var/www/passenger_documentation/releases/20180622080550; then echo "Directory does not exist '/var/www/passenger_documentation/releases/20180622080550'" 1>&2; false; fi
+ DEBUG [eca8b0c1] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [07fcadd7] Running /usr/bin/env npm run build as passenger_library@staging.phusionpassenger.com
+ DEBUG [07fcadd7] Command: cd /var/www/passenger_documentation/releases/20180622080550 && /usr/bin/env npm run build
+ DEBUG [07fcadd7] 	
+> docs-prototype@0.1.0 build /var/www/passenger_documentation/releases/20180622080550
+> react-scripts build
+
+ DEBUG [07fcadd7] 	Creating an optimized production build...
+ DEBUG [07fcadd7] 	Compiled successfully.
+
+ DEBUG [07fcadd7] 	File sizes after gzip:
+
+ DEBUG [07fcadd7] 	  144.82 KB  build/static/js/main.ad61a1c9.js
+ DEBUG [07fcadd7] 	  4.42 KB    build/static/css/main.b0115370.css
+ DEBUG [07fcadd7] 	
+ DEBUG [07fcadd7] 	The project was built assuming it is hosted at /docs/.
+ DEBUG [07fcadd7] 	You can control this with the homepage field in your package.json.
+ DEBUG [07fcadd7] 	
+ DEBUG [07fcadd7] 	The build folder is ready to be deployed.
+ DEBUG [07fcadd7] 	
+ DEBUG [07fcadd7] 	Find out more about deployment here:
+ DEBUG [07fcadd7] 	
+ DEBUG [07fcadd7] 	  http://bit.ly/2vY88Kr
+ DEBUG [07fcadd7] 	
+  INFO [07fcadd7] Finished in 23.340 seconds with exit status 0 (successful).
+  INFO [4bf49e5d] Running /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180622080550 /var/www/passenger_documentation/releases/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [4bf49e5d] Command: /usr/bin/env ln -s /var/www/passenger_documentation/releases/20180622080550 /var/www/passenger_documentation/releases/current
+  INFO [4bf49e5d] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [480469da] Running /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation as passenger_library@staging.phusionpassenger.com
+ DEBUG [480469da] Command: /usr/bin/env mv /var/www/passenger_documentation/releases/current /var/www/passenger_documentation
+  INFO [480469da] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [1b850fde] Running /usr/bin/env ls -x /var/www/passenger_documentation/releases as passenger_library@staging.phusionpassenger.com
+ DEBUG [1b850fde] Command: /usr/bin/env ls -x /var/www/passenger_documentation/releases
+ DEBUG [1b850fde] 	20180621151324	20180621151945	20180621152136	20180621152347	20180621153226
+20180622080550
+ DEBUG [1b850fde] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on staging.phusionpassenger.com
+ DEBUG [fbb61dd2] Running [ -d /var/www/passenger_documentation/current ] as passenger_library@staging.phusionpassenger.com
+ DEBUG [fbb61dd2] Command: [ -d /var/www/passenger_documentation/current ]
+ DEBUG [fbb61dd2] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [df3a26fc] Running /usr/bin/env readlink /var/www/passenger_documentation/current as passenger_library@staging.phusionpassenger.com
+ DEBUG [df3a26fc] Command: /usr/bin/env readlink /var/www/passenger_documentation/current
+ DEBUG [df3a26fc] 	/var/www/passenger_documentation/releases/20180622080550
+ DEBUG [df3a26fc] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [ee0c3831] Running /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621151324 as passenger_library@staging.phusionpassenger.com
+ DEBUG [ee0c3831] Command: /usr/bin/env rm -rf /var/www/passenger_documentation/releases/20180621151324
+  INFO [ee0c3831] Finished in 1.186 seconds with exit status 0 (successful).
+ DEBUG [004310cb] Running if test ! -d /var/www/passenger_documentation/releases; then echo "Directory does not exist '/var/www/passenger_documentation/releases'" 1>&2; false; fi as passenger_library@staging.phusionpassenger.com
+ DEBUG [004310cb] Command: if test ! -d /var/www/passenger_documentation/releases; then echo "Directory does not exist '/var/www/passenger_documentation/releases'" 1>&2; false; fi
+ DEBUG [004310cb] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [7befdf95] Running /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180622080550 by luuk" >> /var/www/passenger_documentation/revisions.log as passenger_library@staging.phusionpassenger.com
+ DEBUG [7befdf95] Command: cd /var/www/passenger_documentation/releases && /usr/bin/env echo "Branch master (at 2385e3df2ced5c138f54ea90451e8c9913702f2f) deployed as release 20180622080550 by luuk" >> /var/www/passenger_documentation/revisions.log
+  INFO [7befdf95] Finished in 0.069 seconds with exit status 0 (successful).
