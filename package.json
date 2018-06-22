@@ -2,7 +2,7 @@
   "name": "docs-prototype",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "http://staging.phusionpassenger.com/docs",
   "dependencies": {
     "npm": "^6.0.0",
     "query-string": "^5.1.1",
