@@ -21,7 +21,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/img/digitalocean/digital_ocean_create_droplet.png" class="img-thumbnail">
+    <img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_create_droplet.png" class="img-thumbnail">
   </div>
 </div>
 <div class="row row-instruction">
@@ -31,7 +31,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-  	<img src="/img/digitalocean/digital_ocean_image.png" class="img-thumbnail" style="max-height: 15em">
+  	<img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_image.png" class="img-thumbnail" style="max-height: 15em">
   </div>
 </div>
 <div class="row row-instruction">
@@ -41,7 +41,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-		<img src="/img/digitalocean/digital_ocean_size.png" class="img-thumbnail">
+		<img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_size.png" class="img-thumbnail">
   </div>
 </div>
 <div class="row row-instruction">
@@ -51,7 +51,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/img/digitalocean/digital_ocean_final.png" class="img-thumbnail">
+    <img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_final.png" class="img-thumbnail">
   </div>
 </div>
 <div class="row row-instruction">
@@ -61,7 +61,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/img/digitalocean/digital_ocean_creating.png" class="img-thumbnail">
+    <img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_creating.png" class="img-thumbnail">
   </div>
 </div>
 <div class="row row-instruction">
@@ -71,7 +71,7 @@ On this page, we will launch a Digital Ocean server (or "droplets" as Digital Oc
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/img/digitalocean/digital_ocean_ip.png" class="img-thumbnail">
+    <img src="${process.env.PUBLIC_URL}/img/digitalocean/digital_ocean_ip.png" class="img-thumbnail">
   </div>
 </div>
 <div class="row row-instruction">

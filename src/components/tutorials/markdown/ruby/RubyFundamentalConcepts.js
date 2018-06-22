@@ -30,7 +30,7 @@ Passenger as application server, and Capistrano as release automation tool.
 Passenger integrates with Nginx or Apache and manages the application and its resources.
 
 <div>
-	<img src="/img/fundamentals.svg" alt="fit in stack"/>
+	<img src="${process.env.PUBLIC_URL}/img/fundamentals.svg" alt="fit in stack"/>
 	<p class="sub-text">Passenger integrates with Nginx/Apache, allows the app to speak HTTP and manages the app's processes and resources. Capistrano automates releases.</p>
 </div>
 
@@ -78,7 +78,7 @@ and Apache integration modes are covered in the
 [deployment tutorial](walkthroughs/deploy/${this.props.currentLanguage}/index.html).
 
 <div>
-	<img src="/img/multiple_placeholder.svg" alt="multiple integrations"/>
+	<img src="${process.env.PUBLIC_URL}/img/multiple_placeholder.svg" alt="multiple integrations"/>
 	<p class="sub-text">Passenger's supported integration modes. In the Standalone modes, Passenger uses a builtin web server. In the Nginx/Apache integration modes, Passenger integrates with Nginx or Apache.</p>
 </div>
 

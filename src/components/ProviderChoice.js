@@ -27,7 +27,7 @@ class ProviderChoice extends Component {
 						onChange={this.handleChange}
 					/>
 					<label htmlFor="radio-aws">
-						<img src="/img/aws2.svg" alt="aws logo"/>
+						<img src={`${process.env.PUBLIC_URL}/img/aws2.svg`} alt="aws logo"/>
 
 					</label>
 				</div>
@@ -42,7 +42,7 @@ class ProviderChoice extends Component {
 							onChange={this.handleChange}
 						/>
 						<label htmlFor="radio-cloud">
-							<img src="/img/cloud66.svg" alt="cloud 66 logo"/>
+							<img src={`${process.env.PUBLIC_URL}/img/cloud66.svg`} alt="cloud 66 logo"/>
 
 						</label>
 					</div>
@@ -58,7 +58,7 @@ class ProviderChoice extends Component {
 						onChange={this.handleChange}
 					/>
 					<label htmlFor="radio-digitalocean">
-						<img src="/img/ocean.svg" alt="digital ocean"/>
+						<img src={`${process.env.PUBLIC_URL}/img/ocean.svg`} alt="digital ocean"/>
 
 					</label>
 				</div>
@@ -73,7 +73,7 @@ class ProviderChoice extends Component {
 							onChange={this.handleChange} 
 						/>
 						<label htmlFor="radio-heroku">
-							<img src="/img/heroku.svg" alt="heroku"/>
+							<img src={`${process.env.PUBLIC_URL}/img/heroku.svg`} alt="heroku"/>
 
 						</label>
 					</div>

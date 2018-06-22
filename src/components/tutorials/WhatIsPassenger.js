@@ -47,19 +47,19 @@ Passenger can also serve multiple applications at the same time (it is multitena
 					<strong>Supported languages:</strong>
 					<div className="logos">
 						<div>
-							<img src="/img/ruby.svg" alt="ruby"/>
+							<img src={`${process.env.PUBLIC_URL}/img/ruby.svg`} alt="ruby"/>
 							<span>Ruby</span>
 						</div>
 						<div>
-							<img src="/img/node.svg" alt="node"/>
+							<img src={`${process.env.PUBLIC_URL}/img/node.svg`} alt="node"/>
 							<span>Node</span>
 						</div>
 						<div>
-							<img src="/img/python.svg" alt="python"/>
+							<img src={`${process.env.PUBLIC_URL}/img/python.svg`} alt="python"/>
 							<span>Python</span>
 						</div>
 						<div>
-							<img src="/img/meteor.svg" alt="meteor"/>
+							<img src={`${process.env.PUBLIC_URL}/img/meteor.svg`} alt="meteor"/>
 							<span>Meteor</span>
 						</div>
 					</div>
@@ -67,15 +67,15 @@ Passenger can also serve multiple applications at the same time (it is multitena
 					<strong>Supported integrations:</strong>
 					<div className="logos">
 						<div>
-							<img src="/img/nginx.svg" alt="nginx"/>
+							<img src={`${process.env.PUBLIC_URL}/img/nginx.svg`} alt="nginx"/>
 							<span>Nginx</span>
 						</div>
 						<div>
-							<img src="/img/apache.svg" alt="apache"/>
+							<img src={`${process.env.PUBLIC_URL}/img/apache.svg`} alt="apache"/>
 							<span>Apache</span>
 						</div>
 						<div>
-							<img src="/img/passenger_logo.svg" alt="passenger logo"/>
+							<img src={`${process.env.PUBLIC_URL}/img/passenger_logo.svg`} alt="passenger logo"/>
 							<span>Standalone</span>
 						</div>
 					</div>

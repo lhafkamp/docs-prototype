@@ -10,11 +10,11 @@ class NodeFundamentalConcepts extends Component {
 
 Node.js applications are normally responsible for their services from the ground-up. You literally ran the application, which would for example import support libraries for handling HTTP requests, spawning subprocesses of itself, etc.
 
-<figure><img src="/img/traditional_nodejs.png"></figure>
+<figure><img src="${process.env.PUBLIC_URL}/img/traditional_nodejs.png"></figure>
 
 As an application server, Passenger reverses this relationship. The application server runs the application. Services are provided to the application "for free". [The reverse port binding mechanism](<%= url_for "/indepth/nodejs/reverse_port_binding.html" %>) is an example of this reversed relationship at work.
 
-<figure><img src="/img/app_server_concept.png"></figure>
+<figure><img src="${process.env.PUBLIC_URL}/img/app_server_concept.png"></figure>
 
 ## How Passenger fits in the stack
 
@@ -23,7 +23,7 @@ When you deploy your web app to production, there are all sorts of components in
 In a typical production stack, one would use Nginx as the web server and Passenger as the application server. Passenger integrates with Nginx and manages the application and its resources.
 
 <figure>
-  <img src="/img/passenger_node_architecture.png">
+  <img src=${process.env.PUBLIC_URL}/img/passenger_node_architecture.png">
   <p class="sub-text">Passenger integrates with Nginx and manages the app's processes and resources.</p>
 </figure>
 
@@ -78,7 +78,7 @@ and Apache integration modes are covered in the
 [deployment tutorial](walkthroughs/deploy/${this.props.currentLanguage}/index.html).
 
 <div>
-	<img src="/img/multiple_placeholder.svg" alt="multiple integrations"/>
+	<img src="${process.env.PUBLIC_URL}/img/multiple_placeholder.svg" alt="multiple integrations"/>
 	<p class="sub-text">Passenger's supported integration modes. In the Standalone modes, Passenger uses a builtin web server. In the Nginx/Apache integration modes, Passenger integrates with Nginx or Apache.</p>
 </div>
 

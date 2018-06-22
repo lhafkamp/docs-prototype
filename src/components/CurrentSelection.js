@@ -11,29 +11,29 @@ class CurrentSelection extends Component {
 		switch (this.props.currentLanguage) {
 		default:
 		case 'Ruby':
-			languageLogo = `/img/ruby.svg`;
+			languageLogo = `${process.env.PUBLIC_URL}/img/ruby.svg`;
 			break;
 		case 'Python':
-			languageLogo = `/img/python.svg`;
+			languageLogo = `${process.env.PUBLIC_URL}/img/python.svg`;
 			break;
 		case 'Node':
-			languageLogo = `/img/node.svg`;
+			languageLogo = `${process.env.PUBLIC_URL}/img/node.svg`;
 			break;
 		case 'Meteor':
-			languageLogo = `/img/meteor.svg`;
+			languageLogo = `${process.env.PUBLIC_URL}/img/meteor.svg`;
 			break;
 		}
 
 		switch (this.props.currentIntegration) {
 		default:
 		case 'Nginx':
-			integrationLogo = `/img/nginx.svg`;
+			integrationLogo = `${process.env.PUBLIC_URL}/img/nginx.svg`;
 			break;
 		case 'Apache':
-			integrationLogo = `/img/apache.svg`;
+			integrationLogo = `${process.env.PUBLIC_URL}/img/apache.svg`;
 			break;
 		case 'Standalone':
-			integrationLogo = `/img/passenger_logo.svg`;
+			integrationLogo = `${process.env.PUBLIC_URL}/img/passenger_logo.svg`;
 			break;
 		}
 		

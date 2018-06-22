@@ -39,7 +39,7 @@ class InstallingPassenger extends Component {
 				<TableOfContents />
 				<p>Passenger can be installed through a variety of installation methods. We recommend using an operating system-specific installation method because it has better OS integration, but you can also choose a more generic installation method.</p>
 				<div className="info">
-					Are you looking to install Passenger on <img className="heroku" alt="Heroku" src="/img/heroku.svg" />? Please follow <a href="https://github.com/phusion/passenger-ruby-heroku-demo">the Heroku guide</a>.
+					Are you looking to install Passenger on <img className="heroku" alt="Heroku" src={`${process.env.PUBLIC_URL}/img/heroku.svg`} />? Please follow <a href="https://github.com/phusion/passenger-ruby-heroku-demo">the Heroku guide</a>.
 				</div>
 				<h2>Step 1: Select a Passenger edition</h2>
 				<RadioChoices subject="edition" />

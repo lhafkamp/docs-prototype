@@ -18,7 +18,7 @@ class RightContentToC extends Component {
 		return (
 			<div id="right-content-toc">
 				<TableOfContents />
-				<img src="/img/feedback_placeholder.svg" alt=""/>
+				<img src={`${process.env.PUBLIC_URL}/img/feedback_placeholder.svg`} alt="feedback"/>
 				<a onClick={this.handleClick} className="light-button">Up</a>
 			</div>
 		);

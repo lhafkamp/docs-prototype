@@ -25,7 +25,7 @@ class EditionChoice extends Component {
 						onChange={this.handleChange}
 					/>
 					<label htmlFor="radio-os">
-						<img src="/img/passenger_logo.svg" alt="open-source"/>
+						<img src={`${process.env.PUBLIC_URL}/img/passenger_logo.svg`} alt="open-source"/>
 						<p>Passenger open source</p>
 					</label>
 				</div>
@@ -39,7 +39,7 @@ class EditionChoice extends Component {
 						onChange={this.handleChange}
 					/>
 					<label htmlFor="radio-enterprise">
-						<img src="/img/passenger_logo.svg" alt="enterprise"/>
+						<img src={`${process.env.PUBLIC_URL}/img/passenger_logo.svg`} alt="enterprise"/>
 						<p>Passenger Enterprise</p>
 					</label>
 				</div>

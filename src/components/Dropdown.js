@@ -38,25 +38,25 @@ class Dropdown extends Component {
 			switch (this.state.value) {
 			default:
 			case 'Ruby':
-				logo = '/img/ruby.svg';
+				logo = `${process.env.PUBLIC_URL}/img/ruby.svg`;
 				break;
 			case 'Python':
-				logo = '/img/python.svg';
+				logo = `${process.env.PUBLIC_URL}/img/python.svg`;
 				break;
 			case 'Node':
-				logo = '/img/node.svg';
+				logo = `${process.env.PUBLIC_URL}/img/node.svg`;
 				break;
 			case 'Meteor':
-				logo = '/img/meteor.svg';
+				logo = `${process.env.PUBLIC_URL}/img/meteor.svg`;
 				break;
 			case 'Nginx':
-				logo = '/img/nginx.svg';
+				logo = `${process.env.PUBLIC_URL}/img/nginx.svg`;
 				break;
 			case 'Apache':
-				logo = '/img/apache.svg';
+				logo = `${process.env.PUBLIC_URL}/img/apache.svg`;
 				break;
 			case 'Standalone':
-				logo = '/img/passenger_logo.svg';
+				logo = `${process.env.PUBLIC_URL}/img/passenger_logo.svg`;
 				break;
 			}
 
@@ -83,25 +83,25 @@ class Dropdown extends Component {
 		switch (logo) {
 		default:
 		case 'Ruby':
-			style = { backgroundImage: `url(/img/ruby.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/ruby.svg)`};
 			break;
 		case 'Python':
-			style = { backgroundImage: `url(/img/python.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/python.svg)`};
 			break;
 		case 'Node':
-			style = { backgroundImage: `url(/img/node.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/node.svg)`};
 			break;
 		case 'Meteor':
-			style = { backgroundImage: `url(/img/meteor.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/meteor.svg)`};
 			break;
 		case 'Nginx':
-			style = { backgroundImage: `url(/img/nginx.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/nginx.svg)`};
 			break;
 		case 'Apache':
-			style = { backgroundImage: `url(/img/apache.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/apache.svg)`};
 			break;
 		case 'Standalone':
-			style = { backgroundImage: `url(/img/passenger_logo.svg)`};
+			style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/passenger_logo.svg)`};
 			break;
 		}
 

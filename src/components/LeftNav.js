@@ -82,7 +82,7 @@ class LeftNav extends Component {
 			<React.Fragment>
 				<div id="left-nav" style={{display: this.state.toggleHide ? 'none' : 'block'}}>
 					<div id="left-nav-content">
-						<img className="version" src="/img/version.png" alt="gem version"/>
+						<img className="version" src={`${process.env.PUBLIC_URL}/img/version.png`} alt="gem version"/>
 						<Dropdown choices={this.props.choices} name="language" default={this.state.parsed.language || 'Ruby'} items={this.state.languages} />
 						<Dropdown choices={this.props.choices} name="integration" default={this.state.parsed.integration || 'Nginx'} items={this.state.integrations} />
 						{navigation}
