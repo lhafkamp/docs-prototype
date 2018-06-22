@@ -4,6 +4,8 @@ import '../css/components/header.css';
 
 class Header extends Component {
 	render() {
+		const style = { backgroundImage: `url(${process.env.PUBLIC_URL}/img/search_icon.svg)` };
+
 		return (
 			<div id="header">
 				<div>
@@ -14,8 +16,8 @@ class Header extends Component {
 						<li><NavLink to='/references/' activeClassName="selected">References</NavLink></li>
 						<li><a href="https://www.phusionpassenger.com/library/">Old docs</a></li>
 					</ul>
-					<img className="small-screen-search" src={`${process.env.PUBLIC_URL}"/img/search_icon.svg"`} alt="search docs.." />
-					<input type="search" placeholder="search docs.."/>
+					<img className="small-screen-search" src={`${process.env.PUBLIC_URL}/img/search_icon.svg`}  alt="search docs.." />
+					<input type="search" placeholder="search docs.." style={style} />
 				</div>
 			</div>
 		);
