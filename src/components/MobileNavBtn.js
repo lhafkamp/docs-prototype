@@ -7,7 +7,7 @@ class MobileNavBtn extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/img/menulines.svg')`}} onClick={this.props.event} id="nav-btn"><img src={`/img/${this.props.currentLanguage.toLowerCase()}.svg`} alt=""/></button>
+				<button style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/menulines.svg)` }} onClick={this.props.event} id="nav-btn"><img src={`${process.env.PUBLIC_URL}/img/${this.props.currentLanguage.toLowerCase()}.svg`} alt={this.props.currentLanguage} /></button>
 			</React.Fragment>
 		);
 	}

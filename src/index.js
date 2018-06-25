@@ -1,9 +1,11 @@
+import './polyfillTest';
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
+import 'core-js/fn/array/includes';
 
 import App from './App';
 
