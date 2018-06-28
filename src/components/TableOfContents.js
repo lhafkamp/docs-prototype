@@ -13,7 +13,7 @@ class TableOfContents extends Component {
 
 	componentDidMount() {
 		let headerArray = [];
-		const headers = document.querySelectorAll('#main-content h2');
+		const headers = Array.from(document.querySelectorAll('#main-content h2'));
 		headers.forEach(header => headerArray.push(header));
 		this.setState({ headers: headerArray });
 	}
@@ -24,7 +24,7 @@ class TableOfContents extends Component {
 			prevProps.currentProviderChoice !== this.props.currentProviderChoice) {
 
 			let headerArray = [];
-			const headers = document.querySelectorAll('#main-content h2');
+			const headers = Array.from(document.querySelectorAll('#main-content h2'));
 			headers.forEach(header => headerArray.push(header))
 			this.setState({ headers: headerArray });
 		}
